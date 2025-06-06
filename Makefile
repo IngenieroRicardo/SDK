@@ -36,6 +36,12 @@ sdk:
 	cd ejemplos/ && gcc -o strings.bin strings.c ./array.so && cd ..
 	cd ejemplos/ && gcc -o conversiones.bin conversiones.c ./array.so && cd ..
 	cd ejemplos/ && gcc -o comparaciones.bin comparaciones.c ./array.so && cd ..
+	cd ejemplos/ && gcc -o leerJSON.bin leerJSON.c ./json.so ./array.so && cd ..
+	cd ejemplos/ && gcc -o crearJSON.bin crearJSON.c ./json.so && cd ..
+	cd ejemplos/ && gcc -o holaWebService.bin holaWebService.c ./http.so ./array.so && cd ..
+
+	cd ejemplos/ && gcc -o APIRest.bin APIRest.c ./http.so && cd ..
+	cd ejemplos/ && gcc -o listnegraWebService.bin listnegraWebService.c ./http.so && cd ..
 	
 compile:
 	-@cp -f * sdk/ 2>/dev/null || true
