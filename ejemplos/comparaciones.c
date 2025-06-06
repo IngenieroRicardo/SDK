@@ -10,7 +10,7 @@ int main() {
     printf("Contains: %d\n", Contains("hola mundo", "mun"));
     
     // Reemplazo
-    char* replaced = ReplaceAll("comida bar comida", "comida", "bebida");
+    String replaced = ReplaceAll("comida bar comida", "comida", "bebida");
     printf("Replaced: %s\n", replaced);
     
     // Validación
@@ -18,7 +18,7 @@ int main() {
     printf("IsNumeric: %d\n", IsNumeric("abc"));
     
     // Substrings
-    char* sub = Substring("Hola mundo", 6, 10);
+    String sub = Substring("Hola mundo", 6, 10);
     printf("Substring: %s\n", sub);
     
     // Liberar memoria
