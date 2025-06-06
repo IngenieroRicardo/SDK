@@ -33,7 +33,9 @@ sdk:
 	cp http/http.so ejemplos/http.so
 	cp db/db.h ejemplos/db.h
 	cp db/db.so ejemplos/db.so
-	cd ejemplos/ && gcc -o main.bin main.c ./array.so ./json.so ./http.so ./db.so && cd ..
+	cd ejemplos/ && gcc -o strings.bin strings.c ./array.so && cd ..
+	cd ejemplos/ && gcc -o conversiones.bin conversiones.c ./array.so && cd ..
+	cd ejemplos/ && gcc -o comparaciones.bin comparaciones.c ./array.so && cd ..
 	
 compile:
 	-@cp -f * sdk/ 2>/dev/null || true
