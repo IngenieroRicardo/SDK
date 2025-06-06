@@ -25,6 +25,15 @@ sdk:
 	cp http/http.so sdk/http.so
 	cp db/db.h sdk/db.h
 	cp db/db.so sdk/db.so
+	cp array/array.h test/array.h
+	cp array/array.so test/array.so
+	cp json/json.h test/json.h
+	cp json/json.so test/json.so
+	cp http/http.h test/http.h
+	cp http/http.so test/http.so
+	cp db/db.h test/db.h
+	cp db/db.so test/db.so
+	cd test/ && gcc -o main.bin main.c ./array.so ./json.so ./http.so ./db.so && cd ..
 	
 compile:
 	-@cp -f * sdk/ 2>/dev/null || true
