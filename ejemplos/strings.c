@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "array.h"
 
+// Compilar en Windows: gcc -o strings.exe strings.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o strings.bin strings.c ./array.so
+
 int main() {
     // Crear y llenar array
     StringArray arr = NewStringArray(3);
