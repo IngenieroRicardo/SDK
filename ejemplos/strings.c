@@ -7,13 +7,13 @@
 int main() {
     // Crear y llenar array
     StringArray arr = NewStringArray(3);
-    arr[0] = strdup("Primero");
-    arr[1] = strdup("Segundo");
-    arr[2] = strdup("Tercero");
+    arr[0] = Concat("Primero", NULL);
+    arr[1] = Concat("Segundo", NULL);
+    arr[2] = Concat("Tercero", NULL);
     
     // Procesar array
     printf("Array size: %d\n", GetStringArraySize(arr));
-    char* joined = ConcatAll(arr);
+    String joined = ConcatAll(arr);
     printf("Joined: %s\n", joined);
     
     // Split de strings
