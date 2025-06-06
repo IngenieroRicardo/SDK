@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "array.h"
 
+// Compilar en Windows: gcc -o conversiones.exe conversiones.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o conversiones.bin conversiones.c ./array.so
+
 int main() {
     // Concatenación
     String hello = Concat("Hola", " ", "mundo", "!", NULL);
