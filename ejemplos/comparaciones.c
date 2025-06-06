@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "array.h"
 
+// Compilar en Windows: gcc -o comparaciones.exe comparaciones.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o comparaciones.bin comparaciones.c ./array.so 
+
 int main() {
     // Comparaciones
     printf("Equals: %d\n", Equals("hola", "hola"));
