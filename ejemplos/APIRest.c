@@ -5,6 +5,9 @@
 #include "http.h"
 #include "array.h"
 
+// Compilar en Windows: gcc -o APIRest.exe APIRest.c ./http.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o APIRest.bin APIRest.c ./http.so ./array.so 
+
 Response token_handler(Request req) {
     String token = GetBearerToken(req);
     
@@ -22,12 +25,12 @@ Response login_handler(Request req) {
     String password = GetPassword(req);
     
     // Verificación de credenciales (simplificada)
-    if (strcmp(username, "admin") == 0 && strcmp(password, "secret") == 0) {
+    if (Equals(username, "admin") && Equals(password, "secret")) {
         // Generar nuevo token
         String token = GenerateToken();
         
         // Crear el JSON de respuesta manualmente
-        char* response_body = malloc(strlen(token) + 20); // Espacio suficiente
+        String response_body = NewString(GetStringSize(token) + 20); // Espacio suficiente
         sprintf(response_body, "{\"token\":\"%s\"}", token);
         
         Response res = CreateResponse(200, response_body);
