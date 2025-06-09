@@ -13,9 +13,11 @@ sdk:
 	cd db && go build -o db.so -buildmode=c-shared db.go && cd ..
 	git clone https://github.com/IngenieroRicardo/file.git
 	cd file && go build -o file.so -buildmode=c-shared file.go && cd ..
-
 	git clone https://github.com/IngenieroRicardo/curl.git
 	cd curl && go build -o curl.so -buildmode=c-shared curl.go && cd ..
+
+	git clone https://github.com/IngenieroRicardo/ftp.git
+	cd ftp && go build -o ftp.so -buildmode=c-shared ftp.go && cd ..
 
 	mkdir bin
 	cp array/array.so bin/array.so
@@ -23,8 +25,9 @@ sdk:
 	cp http/http.so bin/http.so
 	cp db/db.so bin/db.so
 	cp file/file.so bin/file.so
-
 	cp curl/curl.so bin/curl.so
+
+	cp ftp/ftp.so bin/ftp.so
 
 	mkdir sdk
 	cp array/array.h sdk/array.h
@@ -37,9 +40,11 @@ sdk:
 	cp db/db.so sdk/db.so
 	cp file/file.h sdk/file.h
 	cp file/file.so sdk/file.so
-
 	cp curl/curl.h sdk/curl.h
 	cp curl/curl.so sdk/curl.so
+
+	cp ftp/ftp.h sdk/ftp.h
+	cp ftp/ftp.so sdk/ftp.so
 
 	cp array/array.h ejemplos/array.h
 	cp array/array.so ejemplos/array.so
@@ -51,9 +56,11 @@ sdk:
 	cp db/db.so ejemplos/db.so
 	cp file/file.h ejemplos/file.h
 	cp file/file.so ejemplos/file.so
-
 	cp curl/curl.h ejemplos/curl.h
 	cp curl/curl.so ejemplos/curl.so
+
+	cp ftp/ftp.h ejemplos/ftp.h
+	cp ftp/ftp.so ejemplos/ftp.so
 
 	cd ejemplos/ && gcc -o strings.bin strings.c ./array.so && cd ..
 	cd ejemplos/ && gcc -o conversiones.bin conversiones.c ./array.so && cd ..
@@ -66,13 +73,14 @@ sdk:
 	cd ejemplos/ && gcc -o listar.bin listar.c ./file.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o files.bin files.c ./file.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o content.bin content.c ./file.so ./array.so && cd ..
-
 	cd ejemplos/ && gcc -o peticion.bin peticion.c ./curl.so ./array.so && cd ..
+
+	cd ejemplos/ && gcc -o accionesFTP.bin accionesFTP.c ./ftp.so ./array.so && cd ..
 	
 compile:
 	-@cp -f * sdk/ 2>/dev/null || true
 	rm sdk/Makefile
-	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so ./curl.so && cd ..
+	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so ./curl.so ./ftp.so && cd ..
 
 run:
 	cd bin && ./$(OUT)
