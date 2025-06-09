@@ -2,6 +2,9 @@
 #include "curl.h"
 #include "array.h"
 
+// Compilar en Windows: gcc -o peticion.exe peticion.c ./curl.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o peticion.bin peticion.c ./curl.so ./array.so 
+
 int main() {
     String header = Concat(
                         Header("Accept", "application/json"), "\n",
