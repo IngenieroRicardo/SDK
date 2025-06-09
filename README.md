@@ -5,7 +5,7 @@ Kit de Desarrollo de Software (SDK) escrito en lenguaje Golang, diseñado para f
 
 | Linux/BSD/MacOS | Windows |
 | --- | --- |
-| Make | PowerShell |
+| Make | cmd |
 | GCC | GCC |
 | Golang | Golang |
 | Git | Git |
