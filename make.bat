@@ -7,7 +7,7 @@ if "%1"=="sdk" goto sdk
 if "%1"=="compile" goto compile
 if "%1"=="run" goto run
 
-echo Uso: build.bat [sdk ^| compile ^| run]
+echo Uso: make [sdk ^| compile ^| run]
 goto end
 
 :: FUNCION: Descarga y construye SDKs
