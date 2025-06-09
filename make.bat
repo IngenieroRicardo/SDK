@@ -38,12 +38,18 @@ cd file
 go build -o file.dll -buildmode=c-shared file.go
 cd ..
 
+git clone https://github.com/IngenieroRicardo/curl.git
+cd curl
+go build -o curl.dll -buildmode=c-shared curl.go
+cd ..
+
 mkdir bin 2>nul
 copy /Y array\array.dll bin\
 copy /Y json\json.dll bin\
 copy /Y http\http.dll bin\
 copy /Y db\db.dll bin\
 copy /Y file\file.dll bin\
+copy /Y curl\curl.dll bin\
 
 mkdir sdk 2>nul
 copy /Y array\array.h sdk\
@@ -56,7 +62,8 @@ copy /Y db\db.h sdk\
 copy /Y db\db.dll sdk\
 copy /Y file\file.h sdk\
 copy /Y file\file.dll sdk\
-
+copy /Y curl\curl.h sdk\
+copy /Y curl\curl.dll sdk\
 copy /Y array\array.h ejemplos\
 copy /Y array\array.dll ejemplos\
 copy /Y json\json.h ejemplos\
@@ -67,6 +74,8 @@ copy /Y db\db.h ejemplos\
 copy /Y db\db.dll ejemplos\
 copy /Y file\file.h ejemplos\
 copy /Y file\file.dll ejemplos\
+copy /Y curl\curl.h ejemplos\
+copy /Y curl\curl.dll ejemplos\
 
 cd ejemplos
 gcc -o strings.exe strings.c ./array.dll
@@ -80,6 +89,7 @@ gcc -o validarip.exe validarip.c ./http.dll ./array.dll
 gcc -o listar.exe listar.c ./file.dll ./array.dll
 gcc -o files.exe files.c ./file.dll ./array.dll
 gcc -o content.exe content.c ./file.dll ./array.dll
+gcc -o peticion.exe peticion.c ./curl.dll ./array.dll
 cd ..
 goto end
 
@@ -89,7 +99,7 @@ echo === Compilando %SRC% ===
 xcopy /Y * sdk\ >nul
 del sdk\Makefile >nul 2>&1
 cd sdk
-gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll ./file.dll
+gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll ./file.dll ./curl.dll
 cd ..
 goto end
 
