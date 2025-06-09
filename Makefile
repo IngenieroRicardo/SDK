@@ -11,18 +11,14 @@ sdk:
 	cd http && go build -o http.so -buildmode=c-shared http.go && cd ..
 	git clone https://github.com/IngenieroRicardo/db.git
 	cd db && go build -o db.so -buildmode=c-shared db.go && cd ..
-	
 	git clone https://github.com/IngenieroRicardo/file.git
 	cd file && go build -o file.so -buildmode=c-shared file.go && cd ..
-
 	mkdir bin
 	cp array/array.so bin/array.so
 	cp json/json.so bin/json.so
 	cp http/http.so bin/http.so
 	cp db/db.so bin/db.so
-	
 	cp file/file.so bin/file.so
-
 	mkdir sdk
 	cp array/array.h sdk/array.h
 	cp array/array.so sdk/array.so
@@ -42,10 +38,8 @@ sdk:
 	cp http/http.so ejemplos/http.so
 	cp db/db.h ejemplos/db.h
 	cp db/db.so ejemplos/db.so
-
 	cp file/file.h ejemplos/file.h
 	cp file/file.so ejemplos/file.so
-
 	cd ejemplos/ && gcc -o strings.bin strings.c ./array.so && cd ..
 	cd ejemplos/ && gcc -o conversiones.bin conversiones.c ./array.so && cd ..
 	cd ejemplos/ && gcc -o comparaciones.bin comparaciones.c ./array.so && cd ..
@@ -54,7 +48,6 @@ sdk:
 	cd ejemplos/ && gcc -o webservice.bin webservice.c ./http.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o autenticacion.bin autenticacion.c ./http.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o validarip.bin validarip.c ./http.so ./array.so && cd ..
-
 	cd ejemplos/ && gcc -o listar.bin listar.c ./file.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o files.bin files.c ./file.so ./array.so && cd ..
 	cd ejemplos/ && gcc -o content.bin content.c ./file.so ./array.so && cd ..
@@ -62,7 +55,7 @@ sdk:
 compile:
 	-@cp -f * sdk/ 2>/dev/null || true
 	rm sdk/Makefile
-	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so && cd ..
+	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so && cd ..
 
 run:
 	cd bin && ./$(OUT)

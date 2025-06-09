@@ -33,11 +33,17 @@ cd db
 go build -o db.dll -buildmode=c-shared db.go
 cd ..
 
+git clone https://github.com/IngenieroRicardo/file.git
+cd file
+go build -o file.dll -buildmode=c-shared file.go
+cd ..
+
 mkdir bin 2>nul
 copy /Y array\array.dll bin\
 copy /Y json\json.dll bin\
 copy /Y http\http.dll bin\
 copy /Y db\db.dll bin\
+copy /Y file\file.dll bin\
 
 mkdir sdk 2>nul
 copy /Y array\array.h sdk\
@@ -48,6 +54,8 @@ copy /Y http\http.h sdk\
 copy /Y http\http.dll sdk\
 copy /Y db\db.h sdk\
 copy /Y db\db.dll sdk\
+copy /Y file\file.h sdk\
+copy /Y file\file.dll sdk\
 
 copy /Y array\array.h ejemplos\
 copy /Y array\array.dll ejemplos\
@@ -57,6 +65,8 @@ copy /Y http\http.h ejemplos\
 copy /Y http\http.dll ejemplos\
 copy /Y db\db.h ejemplos\
 copy /Y db\db.dll ejemplos\
+copy /Y file\file.h ejemplos\
+copy /Y file\file.dll ejemplos\
 
 cd ejemplos
 gcc -o strings.exe strings.c ./array.dll
@@ -67,6 +77,9 @@ gcc -o crearJSON.exe crearJSON.c ./json.dll
 gcc -o webservice.exe webservice.c ./http.dll ./array.dll
 gcc -o autenticacion.exe autenticacion.c ./http.dll ./array.dll
 gcc -o validarip.exe validarip.c ./http.dll ./array.dll
+gcc -o listar.exe listar.c ./file.dll ./array.dll
+gcc -o files.exe files.c ./file.dll ./array.dll
+gcc -o content.exe content.c ./file.dll ./array.dll
 cd ..
 goto end
 
@@ -76,7 +89,7 @@ echo === Compilando %SRC% ===
 xcopy /Y * sdk\ >nul
 del sdk\Makefile >nul 2>&1
 cd sdk
-gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll
+gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll ./file.dll
 cd ..
 goto end
 
