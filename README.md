@@ -27,6 +27,5 @@ make compile
 ### 🚀 Ejecutar main.bin
 
 ```bash
-cd bin
-./main.bin
+make run
 ```
