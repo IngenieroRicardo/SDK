@@ -104,6 +104,9 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o accionesFTP.bin accionesFTP.s ./ftp.so ./array.so && cd ..
 	
 	# Compilar los ejemplos en Golang
+	cd ejemplos/Golang/ && go build -o leerJSON.bin leerJSON.go && cd ..
+	cd ejemplos/Golang/ && go build -o crearJSON.bin crearJSON.go && cd ..
+	
 	cd ejemplos/Golang/ && go build -o peticion.bin peticion.go && cd ..
 	cd ejemplos/Golang/ && go build -o consultas.bin consultas.go && cd ..
 	
