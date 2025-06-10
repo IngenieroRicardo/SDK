@@ -81,6 +81,7 @@ sdk:
 	cd ejemplos/C/ && gcc -o autenticacion.bin autenticacion.c ./http.so ./array.so && cd ..
 	cd ejemplos/C/ && gcc -o validarip.bin validarip.c ./http.so ./array.so && cd ..
 	cd ejemplos/C/ && gcc -o listar.bin listar.c ./file.so ./array.so && cd ..
+	cd ejemplos/C/ && gcc -o consultas.bin consultas.c ./db.so ./array.so && cd ..
 	cd ejemplos/C/ && gcc -o files.bin files.c ./file.so ./array.so && cd ..
 	cd ejemplos/C/ && gcc -o content.bin content.c ./file.so ./array.so && cd ..
 	cd ejemplos/C/ && gcc -o peticion.bin peticion.c ./curl.so ./array.so && cd ..
@@ -96,6 +97,7 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o autenticacion.bin autenticacion.s ./http.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o validarip.bin validarip.s ./http.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o listar.bin listar.s ./file.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o consultas.bin consultas.s ./db.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o files.bin files.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o content.bin content.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o peticion.bin peticion.s ./curl.so ./array.so && cd ..
