@@ -72,46 +72,46 @@ sdk:
 	cp ftp/ftp.so ejemplos/assembly/ftp.so
 
 	# Compilar los ejemplos en C
-	cd ejemplos/C/ && gcc -o strings.bin strings.c ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o conversiones.bin conversiones.c ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o comparaciones.bin comparaciones.c ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o leerJSON.bin leerJSON.c ./json.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o crearJSON.bin crearJSON.c ./json.so && cd ..
-	cd ejemplos/C/ && gcc -o webservice.bin webservice.c ./http.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o autenticacion.bin autenticacion.c ./http.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o validarip.bin validarip.c ./http.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o listar.bin listar.c ./file.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o consultas.bin consultas.c ./db.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o files.bin files.c ./file.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o content.bin content.c ./file.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o peticion.bin peticion.c ./curl.so ./array.so && cd ..
-	cd ejemplos/C/ && gcc -o accionesFTP.bin accionesFTP.c ./ftp.so ./array.so && cd ..
+	cd ejemplos/C/ && gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.so && gcc -S -fPIC -O2 ARRAYstrings.c -o ../assembly/ARRAYstrings.s && cd ..
+	cd ejemplos/C/ && gcc -o ARRAYconversiones.bin ARRAYconversiones.c ./array.so && gcc -S -fPIC -O2 ARRAYconversiones.c -o ../assembly/ARRAYconversiones.s && cd ..
+	cd ejemplos/C/ && gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.c ./array.so && gcc -S -fPIC -O2 ARRAYcomparaciones.c -o ../assembly/ARRAYcomparaciones.s && cd ..
+	cd ejemplos/C/ && gcc -o JSONleer.bin JSONleer.c ./json.so ./array.so && gcc -S -fPIC -O2 JSONleer.c -o ../assembly/JSONleer.s && cd ..
+	cd ejemplos/C/ && gcc -o JSONcrear.bin JSONcrear.c ./json.so && gcc -S -fPIC -O2 JSONcrear.c -o ../assembly/JSONcrear.s && cd ..
+	cd ejemplos/C/ && gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPwebservice.c -o ../assembly/HTTPwebservice.s && cd ..
+	cd ejemplos/C/ && gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPautenticacion.c -o ../assembly/HTTPautenticacion.s && cd ..
+	cd ejemplos/C/ && gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPvalidarip.c -o ../assembly/HTTPvalidarip.s && cd ..
+	cd ejemplos/C/ && gcc -o FILESlistar.bin FILESlistar.c ./file.so ./array.so && gcc -S -fPIC -O2 FILESfiles.c -o ../assembly/FILESfiles.s && cd ..
+	cd ejemplos/C/ && gcc -o DBconsultas.bin DBconsultas.c ./db.so ./array.so && gcc -S -fPIC -O2 FILESlistar.c -o ../assembly/FILESlistar.s && cd ..
+	cd ejemplos/C/ && gcc -o FILESfiles.bin FILESfiles.c ./file.so ./array.so && gcc -S -fPIC -O2 FILEcontent.c -o ../assembly/FILEcontent.s && cd ..
+	cd ejemplos/C/ && gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so && gcc -S -fPIC -O2 DBconsultas.c -o ../assembly/DBconsultas.s && cd ..
+	cd ejemplos/C/ && gcc -o CURLpeticion.bin CURLpeticion.c ./curl.so ./array.so && gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s && cd ..
+	cd ejemplos/C/ && gcc -o FTPacciones.bin FTPacciones.c ./ftp.so ./array.so && gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s && cd ..
 
 	# Compilar los ejemplos en assembly
-	cd ejemplos/assembly/ && gcc -o strings.bin strings.s ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o conversiones.bin conversiones.s ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o comparaciones.bin comparaciones.s ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o leerJSON.bin leerJSON.s ./json.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o crearJSON.bin crearJSON.s ./json.so && cd ..
-	cd ejemplos/assembly/ && gcc -o webservice.bin webservice.s ./http.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o autenticacion.bin autenticacion.s ./http.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o validarip.bin validarip.s ./http.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o files.bin files.s ./file.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o listar.bin listar.s ./file.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o content.bin content.s ./file.so ./array.so && cd ..	
-	cd ejemplos/assembly/ && gcc -o consultas.bin consultas.s ./db.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o peticion.bin peticion.s ./curl.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o accionesFTP.bin accionesFTP.s ./ftp.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o ARRAYstrings.bin ARRAYstrings.s ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o ARRAYconversiones.bin ARRAYconversiones.s ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.s ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o JSONleer.bin JSONleer.s ./json.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o JSONcrear.bin JSONcrear.s ./json.so && cd ..
+	cd ejemplos/assembly/ && gcc -o HTTPwebservice.bin HTTPwebservice.s ./http.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o HTTPautenticacion.bin HTTPautenticacion.s ./http.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o HTTPvalidarip.bin HTTPvalidarip.s ./http.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o FILESfiles.bin FILESfiles.s ./file.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o FILESlistar.bin FILESlistar.s ./file.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o FILEcontent.bin FILEcontent.s ./file.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o DBconsultas.bin DBconsultas.s ./db.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o CURLpeticion.bin CURLpeticion.s ./curl.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o FTPacciones.bin FTPacciones.s ./ftp.so ./array.so && cd ..
 	
 	# Compilar los ejemplos en Golang
-	cd ejemplos/Golang/ && go build -o leerJSON.bin leerJSON.go && cd ..
-	cd ejemplos/Golang/ && go build -o crearJSON.bin crearJSON.go && cd ..
+	cd ejemplos/Golang/ && go build -o JSONleer.bin JSONleer.go && cd ..
+	cd ejemplos/Golang/ && go build -o JSONcrear.bin JSONcrear.go && cd ..
 
-	cd ejemplos/Golang/ && go build -o content.bin content.go && cd ..
-	cd ejemplos/Golang/ && go build -o files.bin files.go && cd ..
-	cd ejemplos/Golang/ && go build -o listar.bin listar.go && cd ..
-	cd ejemplos/Golang/ && go build -o consultas.bin consultas.go && cd ..
-	cd ejemplos/Golang/ && go build -o peticion.bin peticion.go && cd ..
+	cd ejemplos/Golang/ && go build -o FILEcontent.bin FILEcontent.go && cd ..
+	cd ejemplos/Golang/ && go build -o FILESfiles.bin FILESfiles.go && cd ..
+	cd ejemplos/Golang/ && go build -o FILESlistar.bin FILESlistar.go && cd ..
+	cd ejemplos/Golang/ && go build -o DBconsultas.bin DBconsultas.go && cd ..
+	cd ejemplos/Golang/ && go build -o CURLpeticion.bin CURLpeticion.go && cd ..
 	
 	
 compile:
