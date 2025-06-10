@@ -109,8 +109,9 @@ sdk:
 	
 	cd ejemplos/Golang/ && go build -o files.bin files.go && cd ..
 	cd ejemplos/Golang/ && go build -o listar.bin listar.go && cd ..
-	cd ejemplos/Golang/ && go build -o peticion.bin peticion.go && cd ..
 	cd ejemplos/Golang/ && go build -o consultas.bin consultas.go && cd ..
+	cd ejemplos/Golang/ && go build -o peticion.bin peticion.go && cd ..
+	
 	
 compile:
 	# Con este comando generas el assemblyd de tu codigo C: gcc -S -fPIC -O2 main.c -o main.s
