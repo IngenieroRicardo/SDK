@@ -17,31 +17,32 @@ git clone https://github.com/IngenieroRicardo/array.git
 cd array
 go build -o array.dll -buildmode=c-shared array.go
 cd ..
-
 git clone https://github.com/IngenieroRicardo/json.git
 cd json
 go build -o json.dll -buildmode=c-shared json.go
 cd ..
-
 git clone https://github.com/IngenieroRicardo/http.git
 cd http
 go build -o http.dll -buildmode=c-shared http.go
 cd ..
-
 git clone https://github.com/IngenieroRicardo/db.git
 cd db
 go build -o db.dll -buildmode=c-shared db.go
 cd ..
-
 git clone https://github.com/IngenieroRicardo/file.git
 cd file
 go build -o file.dll -buildmode=c-shared file.go
 cd ..
-
 git clone https://github.com/IngenieroRicardo/curl.git
 cd curl
 go build -o curl.dll -buildmode=c-shared curl.go
 cd ..
+
+git clone https://github.com/IngenieroRicardo/ftp.git
+cd curl
+go build -o ftp.dll -buildmode=c-shared ftp.go
+cd ..
+
 
 mkdir bin 2>nul
 copy /Y array\array.dll bin\
@@ -50,6 +51,7 @@ copy /Y http\http.dll bin\
 copy /Y db\db.dll bin\
 copy /Y file\file.dll bin\
 copy /Y curl\curl.dll bin\
+copy /Y ftp\ftp.dll bin\
 
 mkdir sdk 2>nul
 copy /Y array\array.h sdk\
@@ -64,6 +66,8 @@ copy /Y file\file.h sdk\
 copy /Y file\file.dll sdk\
 copy /Y curl\curl.h sdk\
 copy /Y curl\curl.dll sdk\
+copy /Y ftp\ftp.h sdk\
+copy /Y ftp\ftp.dll sdk\
 copy /Y array\array.h ejemplos\
 copy /Y array\array.dll ejemplos\
 copy /Y json\json.h ejemplos\
@@ -76,6 +80,8 @@ copy /Y file\file.h ejemplos\
 copy /Y file\file.dll ejemplos\
 copy /Y curl\curl.h ejemplos\
 copy /Y curl\curl.dll ejemplos\
+copy /Y ftp\ftp.h ejemplos\
+copy /Y ftp\ftp.dll ejemplos\
 
 cd ejemplos
 gcc -o strings.exe strings.c ./array.dll
@@ -90,6 +96,7 @@ gcc -o listar.exe listar.c ./file.dll ./array.dll
 gcc -o files.exe files.c ./file.dll ./array.dll
 gcc -o content.exe content.c ./file.dll ./array.dll
 gcc -o peticion.exe peticion.c ./curl.dll ./array.dll
+gcc -o accionesFTP.exe accionesFTP.c ./ftp.dll ./array.dll
 cd ..
 goto end
 
@@ -99,7 +106,7 @@ echo === Compilando %SRC% ===
 xcopy /Y * sdk\ >nul
 del sdk\Makefile >nul 2>&1
 cd sdk
-gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll ./file.dll ./curl.dll
+gcc -o ..\bin\%OUT% %SRC% ./array.dll ./json.dll ./http.dll ./db.dll ./file.dll ./curl.dll ./ftp.dll
 cd ..
 goto end
 
