@@ -98,8 +98,8 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o validarip.bin validarip.s ./http.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o files.bin files.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o listar.bin listar.s ./file.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o content.bin content.s ./file.so ./array.so && cd ..	
 	cd ejemplos/assembly/ && gcc -o consultas.bin consultas.s ./db.so ./array.so && cd ..
-	cd ejemplos/assembly/ && gcc -o content.bin content.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o peticion.bin peticion.s ./curl.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o accionesFTP.bin accionesFTP.s ./ftp.so ./array.so && cd ..
 	
