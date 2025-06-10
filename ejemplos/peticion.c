@@ -25,6 +25,7 @@ int main() {
     
     // Liberar memoria
     FreeString(header);
+    FreeString(body);
     
     return 0;
 }
