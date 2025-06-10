@@ -24,6 +24,14 @@ int main() {
     char* diver = "oracle";
     char* conexion = "user="system" password="Prueba123456" connectString="localhost:1521/XE";
     */
+
+    
+    // Preparar los argumentos para el INSERT
+    /*String argumentos_insert[2];
+    argumentos_insert[0] = "Ricardo";
+    argumentos_insert[1] = "blob::iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVBhXY/iPA0AlGBgwGFAKlwQmAKrAIgcVRZODCsI5cAAVgVDo4P9/AHe4m2U/OJCWAAAAAElFTkSuQmCC";
+    SQLResult resultado = SQLrun(diver, conexion, "INSERT INTO chat.usuario(nickname, picture) VALUES (?, ?);", argumentos_insert, 2);*/
+    
     
     SQLResult resultado = SQLrun(diver, conexion, query, NULL, 0);
     
