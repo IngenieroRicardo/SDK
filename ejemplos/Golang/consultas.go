@@ -24,7 +24,15 @@ func main() {
 	driver := "oracle"
 	conexion := `user="system" password="Prueba123456" connectString="localhost:1521/XE"`
 	*/
+
+
+	// Preparar los argumentos para el INSERT
+    /*
+    argumento1 := "Ricardo";
+    argumento2 := "blob::iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVBhXY/iPA0AlGBgwGFAKlwQmAKrAIgcVRZODCsI5cAAVgVDo4P9/AHe4m2U/OJCWAAAAAElFTkSuQmCC";
+    resultado := db.SQLrun(driver, conexion, "INSERT INTO chat.usuario(nickname, picture) VALUES (?, ?);", argumento1, argumento2);*/
 	
+
 	resultado := db.SQLrun(driver, conexion, query) // No se pasan argumentos adicionales
 	
 	if resultado.Is_error == 1 {
