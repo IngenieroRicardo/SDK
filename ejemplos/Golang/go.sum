@@ -7,6 +7,8 @@ github.com/IngenieroRicardo/curl v0.0.0-20250610172734-46ffb7aa68c4 h1:BSWBpzCI+
 github.com/IngenieroRicardo/curl v0.0.0-20250610172734-46ffb7aa68c4/go.mod h1:YHTqF34qlrWBrZJ4Gz2QFFYO9gIEhXuag3kxCfrzfpc=
 github.com/IngenieroRicardo/db v0.0.0-20250610185441-b94573e805eb h1:EIuCyncedSmRGpzfa59crZSF4pH1aaX9aiJg6MMJgOQ=
 github.com/IngenieroRicardo/db v0.0.0-20250610185441-b94573e805eb/go.mod h1:aHVbl6v59kM8EhjN3J9bZIeBomNOnl3Lgf+tiUO1gNA=
+github.com/IngenieroRicardo/json v0.0.0-20250610192655-075d270fdbe3 h1:du+fUJXiAYP58lO4qRT260QiOEjWf+PXZnkEmqHjAw4=
+github.com/IngenieroRicardo/json v0.0.0-20250610192655-075d270fdbe3/go.mod h1:dI/A/83Cb81wMiW/1RY9ZCxX/eZzrYlZst6qqP3vQ00=
 github.com/VictoriaMetrics/easyproto v0.1.4 h1:r8cNvo8o6sR4QShBXQd1bKw/VVLSQma/V2KhTBPf+Sc=
 github.com/VictoriaMetrics/easyproto v0.1.4/go.mod h1:QlGlzaJnDfFd8Lk6Ci/fuLxfTo3/GThPs2KH23mv710=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
