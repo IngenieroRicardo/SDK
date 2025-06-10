@@ -36,8 +36,8 @@ Response login_handler(Request req) {
         Response res = CreateResponse(200, response_body);
         
         // Liberar memoria
-        free(response_body);
-        free(token);
+        FreeString(response_body);
+        FreeString(token);
         return res;
     }
     
