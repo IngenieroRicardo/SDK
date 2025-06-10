@@ -7,6 +7,7 @@ require github.com/IngenieroRicardo/curl v0.0.0-20250610172734-46ffb7aa68c4
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/IngenieroRicardo/db v0.0.0-20250610185441-b94573e805eb // indirect
+	github.com/IngenieroRicardo/file v0.0.0-20250610214725-0f3a467efd6b // indirect
 	github.com/IngenieroRicardo/json v0.0.0-20250610192655-075d270fdbe3 // indirect
 	github.com/VictoriaMetrics/easyproto v0.1.4 // indirect
 	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
