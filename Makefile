@@ -102,6 +102,7 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o accionesFTP.bin accionesFTP.s ./ftp.so ./array.so && cd ..
 	
 compile:
+	# Con este comando generas el assemblyd de tu codigo C: gcc -S -fPIC -O2 main.c -o main.s
 	-@cp -f * sdk/ 2>/dev/null || true
 	rm sdk/Makefile
 	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so ./curl.so ./ftp.so && cd ..
