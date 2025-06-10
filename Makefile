@@ -101,6 +101,9 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o peticion.bin peticion.s ./curl.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o accionesFTP.bin accionesFTP.s ./ftp.so ./array.so && cd ..
 	
+	# Compilar los ejemplos en Golang
+	cd ejemplos/Golang/ && go build -o peticion.bin peticion.go && cd ..
+	
 compile:
 	# Con este comando generas el assemblyd de tu codigo C: gcc -S -fPIC -O2 main.c -o main.s
 	-@cp -f * sdk/ 2>/dev/null || true
