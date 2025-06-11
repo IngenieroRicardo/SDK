@@ -11,9 +11,9 @@ func token_handler(req http.HttpRequest) http.HttpResponse {
 
     token_status := http.ValidateToken(token)
     if (token_status == 1) {
-        return http.CreateResponse(200, "{\"message\":\"Valid token\"}")
+        return http.CreateResponse(200, `{"message":"Valid token"}`)
     } else {
-        return http.CreateResponse(403, "{\"error\":\"Invalid token\"}")
+        return http.CreateResponse(403, `{"error":"Invalid token"}`)
     }
 }
 
