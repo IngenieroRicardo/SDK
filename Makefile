@@ -106,7 +106,9 @@ sdk:
 	# Compilar los ejemplos en Golang
 	cd ejemplos/Golang/ && go build -o JSONleer.bin JSONleer.go && cd ..
 	cd ejemplos/Golang/ && go build -o JSONcrear.bin JSONcrear.go && cd ..
-
+	cd ejemplos/Golang/ && go build -o HTTPwebservice.bin HTTPwebservice.go && cd ..
+	cd ejemplos/Golang/ && go build -o HTTPautenticacion.bin HTTPautenticacion.go && cd ..
+	cd ejemplos/Golang/ && go build -o HTTPvalidarip.bin HTTPvalidarip.go && cd ..
 	cd ejemplos/Golang/ && go build -o FILEcontent.bin FILEcontent.go && cd ..
 	cd ejemplos/Golang/ && go build -o FILESfiles.bin FILESfiles.go && cd ..
 	cd ejemplos/Golang/ && go build -o FILESlistar.bin FILESlistar.go && cd ..
