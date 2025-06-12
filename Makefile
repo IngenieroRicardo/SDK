@@ -18,6 +18,8 @@ sdk:
 	cd curl && go build -o curl.so -buildmode=c-shared curl.go && cd ..
 	git clone https://github.com/IngenieroRicardo/ftp.git
 	cd ftp && go build -o ftp.so -buildmode=c-shared ftp.go && cd ..
+	git clone https://github.com/IngenieroRicardo/env.git
+	cd env && go build -o env.so -buildmode=c-shared env.go && cd ..
 
 	# Preparar carpeta donde generar binario de main.c
 	mkdir bin
@@ -28,6 +30,7 @@ sdk:
 	cp file/file.so bin/file.so
 	cp curl/curl.so bin/curl.so
 	cp ftp/ftp.so bin/ftp.so
+	cp env/env.so bin/env.so
 
 	# Preparar carpeta donde compilar main.c
 	mkdir sdk
@@ -45,6 +48,8 @@ sdk:
 	cp curl/curl.so sdk/curl.so
 	cp ftp/ftp.h sdk/ftp.h
 	cp ftp/ftp.so sdk/ftp.so
+	cp env/env.h sdk/env.h
+	cp env/env.so sdk/env.so
 
 	# Copiar librerias para Ejemplos C
 	cp array/array.h ejemplos/C/array.h
@@ -61,6 +66,8 @@ sdk:
 	cp curl/curl.so ejemplos/C/curl.so
 	cp ftp/ftp.h ejemplos/C/ftp.h
 	cp ftp/ftp.so ejemplos/C/ftp.so
+	cp env/env.h ejemplos/C/env.h
+	cp env/env.so ejemplos/C/env.so
 
 	# Copiar librerias para Ejemplos assembly
 	cp array/array.so ejemplos/assembly/array.so
@@ -70,6 +77,7 @@ sdk:
 	cp file/file.so ejemplos/assembly/file.so
 	cp curl/curl.so ejemplos/assembly/curl.so
 	cp ftp/ftp.so ejemplos/assembly/ftp.so
+	cp env/env.so ejemplos/assembly/env.so
 
 	# Compilar los ejemplos en C
 	cd ejemplos/C/ && gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.so && gcc -S -fPIC -O2 ARRAYstrings.c -o ../assembly/ARRAYstrings.s && cd ..
@@ -86,6 +94,7 @@ sdk:
 	cd ejemplos/C/ && gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so && gcc -S -fPIC -O2 DBconsultas.c -o ../assembly/DBconsultas.s && cd ..
 	cd ejemplos/C/ && gcc -o CURLpeticion.bin CURLpeticion.c ./curl.so ./array.so && gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s && cd ..
 	cd ejemplos/C/ && gcc -o FTPacciones.bin FTPacciones.c ./ftp.so ./array.so && gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s && cd ..
+	cd ejemplos/C/ && gcc -o ENVentorno.bin ENVentorno.c ./env.so ./array.so && gcc -S -fPIC -O2 ENVentorno.c -o ../assembly/ENVentorno.s && cd ..
 
 	# Compilar los ejemplos en assembly
 	cd ejemplos/assembly/ && gcc -o ARRAYstrings.bin ARRAYstrings.s ./array.so && cd ..
@@ -102,6 +111,7 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o DBconsultas.bin DBconsultas.s ./db.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o CURLpeticion.bin CURLpeticion.s ./curl.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o FTPacciones.bin FTPacciones.s ./ftp.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o ENVentorno.bin ENVentorno.s ./env.so ./array.so && cd ..
 	
 	# Compilar los ejemplos en Golang
 	cd ejemplos/Golang/ && go build -o JSONleer.bin JSONleer.go && cd ..
@@ -121,7 +131,7 @@ compile:
 	# Con este comando generas el assemblyd de tu codigo C: gcc -S -fPIC -O2 main.c -o main.s
 	-@cp -f * sdk/ 2>/dev/null || true
 	rm sdk/Makefile
-	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so ./curl.so ./ftp.so && cd ..
+	cd sdk/ && gcc -o ../bin/$(OUT) $(SRC) ./array.so ./json.so ./http.so ./db.so ./file.so ./curl.so ./ftp.so ./env.so && cd ..
 
 run:
 	cd bin && ./$(OUT)
