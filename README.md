@@ -1,7 +1,7 @@
 # SDK
 Kit de Desarrollo de Software (SDK) escrito en lenguaje Golang, diseñado para facilitar el desarrollo de aplicaciones en C, Assembly y Golang.
 
-📦 Requisitos
+📦 Requisitos minimos:
 
 | Linux/BSD/MacOS | Windows |
 | --- | --- |
