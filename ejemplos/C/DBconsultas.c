@@ -9,20 +9,20 @@ int main() {
     String diver = Concat("sqlite3", NULL);
     String conexion = Concat("./sqlite3.db", NULL);
     String query = Concat("SELECT '{\"status\": \"OK\"}' AS JSON", NULL); //Construcción de JSON desde Query
-    //String query = "SELECT datetime('now') AS NOW;"; //Construcción de JSON desde Result
+    //String query = Concat("SELECT datetime('now') AS NOW;", NULL); //Construcción de JSON desde Result
 
     /*
-    String diver = "postgres";
-    String conexion = "user=postgres dbname=template1 password=123456 host=localhost sslmode=disable";
+    String diver = Concat("postgres", NULL);
+    String conexion = Concat("user=postgres dbname=template1 password=123456 host=localhost sslmode=disable", NULL);
 
-    String diver = "mysql";
-    String conexion = "root:123456@tcp(127.0.0.1:3306)/test";
+    String diver = Concat("mysql", NULL);
+    String conexion = Concat("root:123456@tcp(127.0.0.1:3306)/test", NULL);
 
-    String diver = "sqlserver";
-    String conexion = "server=localhost;user id=SA;password=Prueba123456;database=master";
+    String diver = Concat("sqlserver", NULL);
+    String conexion = Concat("server=localhost;user id=SA;password=Prueba123456;database=master", NULL);
     
-    String diver = "oracle";
-    String conexion = "user="system" password="Prueba123456" connectString="localhost:1521/XE";
+    String diver = Concat("oracle", NULL);
+    String conexion = Concat("user="system" password="Prueba123456" connectString="localhost:1521/XE", NULL);
     */
 
     
