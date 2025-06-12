@@ -39,7 +39,7 @@ int main() {
         printf("Error: %s\n", resultado.json);
     } else if (resultado.is_empty) {
         printf("Consulta ejecutada pero no retornó datos\n");
-        printf("JSON: %s\n", resultado.json); // Mostrará {"status":"OK"} o []
+        printf("JSON: %s\n", resultado.json);
     } else {
         printf("Datos obtenidos:\n%s\n", resultado.json);
     }
