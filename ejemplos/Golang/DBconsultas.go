@@ -39,7 +39,7 @@ func main() {
 		fmt.Printf("Error: %s\n", resultado.Json)
 	} else if resultado.Is_empty == 1 {
 		fmt.Println("Consulta ejecutada pero no retornó datos")
-		fmt.Printf("JSON: %s\n", resultado.Json) // Mostrará {"status":"OK"} o []
+		fmt.Printf("JSON: %s\n", resultado.Json)
 	} else {
 		fmt.Printf("Datos obtenidos:\n%s\n", resultado.Json)
 	}
