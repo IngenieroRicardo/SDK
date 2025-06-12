@@ -114,6 +114,7 @@ sdk:
 	cd ejemplos/Golang/ && go build -o FILESlistar.bin FILESlistar.go && cd ..
 	cd ejemplos/Golang/ && go build -o DBconsultas.bin DBconsultas.go && cd ..
 	cd ejemplos/Golang/ && go build -o CURLpeticion.bin CURLpeticion.go && cd ..
+	cd ejemplos/Golang/ && go build -o FTPacciones.bin FTPacciones.go && cd ..
 	
 	
 compile:
