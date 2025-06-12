@@ -9,6 +9,8 @@ github.com/IngenieroRicardo/db v0.0.0-20250611190558-0c96e09ec1ac h1:N8+Qri3RLwX
 github.com/IngenieroRicardo/db v0.0.0-20250611190558-0c96e09ec1ac/go.mod h1:aHVbl6v59kM8EhjN3J9bZIeBomNOnl3Lgf+tiUO1gNA=
 github.com/IngenieroRicardo/file v0.0.0-20250610214725-0f3a467efd6b h1:ocQNZa87Tvo2GlxCOl19TFBS7eSi5tEB2TK2jjlFr2w=
 github.com/IngenieroRicardo/file v0.0.0-20250610214725-0f3a467efd6b/go.mod h1:UM/xlL/3EzZ7ZPrhYhV/usvoQxxDT7+wuKZFQWulAB8=
+github.com/IngenieroRicardo/ftp v0.0.0-20250612162113-24f3f8a5b504 h1:5CRT8qXlk5cc8h9ObiULqNY8LCyLOOgFlm6igksBMa4=
+github.com/IngenieroRicardo/ftp v0.0.0-20250612162113-24f3f8a5b504/go.mod h1:OSk2xga6V+88Wb10L/jcIhrd2WkIu0WKmUNSF2xlLpQ=
 github.com/IngenieroRicardo/http v0.0.0-20250611204211-f6597ebb758c h1:9oCGai4GZ95nVI7Ro4G2qRvDrw0eBzgrVFAJXuXEMCg=
 github.com/IngenieroRicardo/http v0.0.0-20250611204211-f6597ebb758c/go.mod h1:jIy66zO5nmNNe0rZY00MpLU2Ai+wb5Ioc53W6339HcY=
 github.com/IngenieroRicardo/json v0.0.0-20250610192655-075d270fdbe3 h1:du+fUJXiAYP58lO4qRT260QiOEjWf+PXZnkEmqHjAw4=

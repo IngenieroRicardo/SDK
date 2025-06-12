@@ -12,6 +12,7 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
+	github.com/IngenieroRicardo/ftp v0.0.0-20250612162113-24f3f8a5b504 // indirect
 	github.com/VictoriaMetrics/easyproto v0.1.4 // indirect
 	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
