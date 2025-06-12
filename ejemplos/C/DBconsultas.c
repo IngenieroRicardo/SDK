@@ -9,20 +9,20 @@ int main() {
     String diver = Concat("sqlite3", NULL);
     String conexion = Concat("./sqlite3.db", NULL);
     String query = Concat("SELECT '{\"status\": \"OK\"}' AS JSON", NULL); //Construcción de JSON desde Query
-    //char* query = "SELECT datetime('now') AS NOW;"; //Construcción de JSON desde Result
+    //String query = "SELECT datetime('now') AS NOW;"; //Construcción de JSON desde Result
 
     /*
-    char* diver = "postgres";
-    char* conexion = "user=postgres dbname=template1 password=123456 host=localhost sslmode=disable";
+    String diver = "postgres";
+    String conexion = "user=postgres dbname=template1 password=123456 host=localhost sslmode=disable";
 
-    char* diver = "mysql";
-    char* conexion = "root:123456@tcp(127.0.0.1:3306)/test";
+    String diver = "mysql";
+    String conexion = "root:123456@tcp(127.0.0.1:3306)/test";
 
-    char* diver = "sqlserver";
-    char* conexion = "server=localhost;user id=SA;password=Prueba123456;database=master";
+    String diver = "sqlserver";
+    String conexion = "server=localhost;user id=SA;password=Prueba123456;database=master";
     
-    char* diver = "oracle";
-    char* conexion = "user="system" password="Prueba123456" connectString="localhost:1521/XE";
+    String diver = "oracle";
+    String conexion = "user="system" password="Prueba123456" connectString="localhost:1521/XE";
     */
 
     
