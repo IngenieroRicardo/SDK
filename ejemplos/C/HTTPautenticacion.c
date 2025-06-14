@@ -5,8 +5,8 @@
 #include "http.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o autenticacion.exe autenticacion.c ./http.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o autenticacion.bin autenticacion.c ./http.so ./array.so 
+// Compilar en Windows: gcc -o HTTPautenticacion.exe HTTPautenticacion.c ./http.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.so ./array.so 
 
 Response token_handler(Request req) {
     String token = GetBearerToken(req);

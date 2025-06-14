@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "array.h"
 
-// Compilar en Windows: gcc -o strings.exe strings.c ./array.dll 
-// Compilar en tipo UNIX: gcc -o strings.bin strings.c ./array.so
+// Compilar en Windows: gcc -o ARRAYstrings.exe ARRAYstrings.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.so
 
 int main() {
     // Crear y llenar array

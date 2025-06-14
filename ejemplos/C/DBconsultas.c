@@ -2,8 +2,8 @@
 #include "db.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o consultas.exe consultas.c ./db.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o consultas.bin consultas.c ./db.so ./array.so
+// Compilar en Windows: gcc -o DBconsultas.exe DBconsultas.c ./db.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o DBconsultas.bin DBconsultas.c ./db.so ./array.so
 
 int main() {
     String diver = Concat("sqlite3", NULL);

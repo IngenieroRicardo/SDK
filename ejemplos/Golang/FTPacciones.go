@@ -9,6 +9,7 @@ func main() {
     // 1. Ejemplo de escritura binaria desde base64
     base64Data := "SGVsbG8gV29ybGQh" // "Hello World!" en base64
     binaryPath := "ftp://usuario:password@127.0.0.1:21/ruta/salida.bin"
+    //binaryPath := "sftp://usuario:password@127.0.0.1:22/ruta/salida.bin"
 
     if ftp.PutFTPFile(base64Data, binaryPath) == nil {
         fmt.Printf("Archivo binario creado: %s\n", binaryPath)
@@ -19,6 +20,7 @@ func main() {
     // 2. Ejemplo de escritura de texto
     textData := "Este es un texto de ejemplo\nSegunda línea"
     textPath := "ftp://usuario:password@127.0.0.1:21/ruta/salida.txt"
+    //textPath := "sftp://usuario:password@127.0.0.1:22/ruta/salida.txt"
 
     if ftp.PutFTPText(textData, textPath) == nil {
         fmt.Printf("Archivo de texto creado: %s\n", textPath)

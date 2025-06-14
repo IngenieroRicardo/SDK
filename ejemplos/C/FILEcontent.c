@@ -3,8 +3,8 @@
 #include "file.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o content.exe content.c ./file.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o content.bin content.c ./file.so ./array.so 
+// Compilar en Windows: gcc -o FILEcontent.exe FILEcontent.c ./file.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so 
 
 int main() {
     // Ejemplo con GetContentTypeFromBase64

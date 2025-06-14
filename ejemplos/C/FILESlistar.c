@@ -3,8 +3,8 @@
 #include "file.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o listar.exe listar.c ./file.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o listar.bin listar.c ./file.so ./array.so 
+// Compilar en Windows: gcc -o FILESlistar.exe FILESlistar.c ./file.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o FILESlistar.bin FILESlistar.c ./file.so ./array.so 
 
 int main() {
     String dirPath = Concat("./", NULL); // Directorio actual

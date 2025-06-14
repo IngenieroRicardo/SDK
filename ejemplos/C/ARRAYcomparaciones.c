@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "array.h"
 
-// Compilar en Windows: gcc -o comparaciones.exe comparaciones.c ./array.dll 
-// Compilar en tipo UNIX: gcc -o comparaciones.bin comparaciones.c ./array.so 
+// Compilar en Windows: gcc -o ARRAYcomparaciones.exe ARRAYcomparaciones.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.c ./array.so 
 
 int main() {
     // Comparaciones

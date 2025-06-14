@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "json.h"
 
-// Compilar en Windows: gcc -o crearJSON.exe crearJSON.c ./json.dll
-// Compilar en tipo UNIX: gcc -o crearJSON.bin crearJSON.c ./json.so
+// Compilar en Windows: gcc -o JSONcrear.exe JSONcrear.c ./json.dll
+// Compilar en tipo UNIX: gcc -o JSONcrear.bin JSONcrear.c ./json.so
 
 int main() {
     // 1. Crear un objeto JSON vacío

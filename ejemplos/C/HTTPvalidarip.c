@@ -3,8 +3,8 @@
 #include "http.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o validarip.exe validarip.c ./http.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o validarip.bin validarip.c ./http.so ./array.so 
+// Compilar en Windows: gcc -o HTTPvalidarip.exe HTTPvalidarip.c ./http.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.so ./array.so 
 
 Response ip_check_handler(Request req) {
     String client_ip = GetClientIP(req);

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "array.h"
 
-// Compilar en Windows: gcc -o conversiones.exe conversiones.c ./array.dll 
-// Compilar en tipo UNIX: gcc -o conversiones.bin conversiones.c ./array.so
+// Compilar en Windows: gcc -o ARRAYconversiones.exe ARRAYconversiones.c ./array.dll 
+// Compilar en tipo UNIX: gcc -o ARRAYconversiones.bin ARRAYconversiones.c ./array.so
 
 int main() {
     // Concatenación

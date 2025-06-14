@@ -3,8 +3,8 @@
 #include "http.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o webservice.exe webservice.c ./http.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o webservice.bin webservice.c ./http.so ./array.so 
+// Compilar en Windows: gcc -o HTTPwebservice.exe HTTPwebservice.c ./http.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.so ./array.so 
 
 Response basic_handler(Request req) {
     String method = GetMethod(req);

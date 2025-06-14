@@ -3,8 +3,8 @@
 #include "file.h"
 #include "array.h"
 
-// Compilar en Windows: gcc -o files.exe files.c ./file.dll ./array.dll 
-// Compilar en tipo UNIX: gcc -o files.bin files.c ./file.so ./array.so 
+// Compilar en Windows: gcc -o FILESfiles.exe FILESfiles.c ./file.dll ./array.dll 
+// Compilar en tipo UNIX: gcc -o FILESfiles.bin FILESfiles.c ./file.so ./array.so 
 
 int main() {
     // 1. Ejemplo de escritura binaria desde base64
