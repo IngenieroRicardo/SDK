@@ -5,7 +5,7 @@ Kit de Desarrollo de Software (SDK) escrito en lenguaje Golang, diseñado para f
 > Si no sabés qué variables deben ser liberadas manualmente (por ejemplo, con `free()`), **no uses este SDK.**  
 > El uso incorrecto puede provocar fugas de memoria, corrupción de datos o comportamiento indefinido en tiempo de ejecución.
 
-Si no querés lidiar con el manejo de memoria a bajo nivel, podés usar el SDK desde Golang.
+Si no querés lidiar con el manejo de memoria a bajo nivel, puedés usar el SDK en lenguaje Golang.
 
 
 ### 📦 Requisitos minimos:
