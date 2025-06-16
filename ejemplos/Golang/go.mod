@@ -1,13 +1,13 @@
 module ejemplos
 
-go 1.24.3
+go 1.24.1
 
 require (
 	github.com/IngenieroRicardo/curl v0.0.0-20250612191438-d71897a86a55
 	github.com/IngenieroRicardo/db v0.0.0-20250612191529-c9218b7333c7
 	github.com/IngenieroRicardo/file v0.0.0-20250612191614-3f54f95c2c77
 	github.com/IngenieroRicardo/ftp v0.0.0-20250614142041-566161d13d0d
-	github.com/IngenieroRicardo/http v0.0.0-20250613221008-747369ab4246
+	github.com/IngenieroRicardo/http v0.0.0-20250616203359-0baf501af468
 	github.com/IngenieroRicardo/json v0.0.0-20250614014856-04f3e8babc2a
 )
 
