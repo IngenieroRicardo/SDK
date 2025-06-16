@@ -44,12 +44,12 @@ go build -o curl.dll -buildmode=c-shared curl.go
 cd ..
 
 git clone https://github.com/IngenieroRicardo/ftp.git
-cd curl
+cd ftp
 go build -o ftp.dll -buildmode=c-shared ftp.go
 cd ..
 
 git clone https://github.com/IngenieroRicardo/env.git
-cd curl
+cd env
 go build -o env.dll -buildmode=c-shared env.go
 cd ..
 
@@ -76,6 +76,10 @@ copy /Y file\file.h sdk\
 copy /Y file\file.dll sdk\
 copy /Y curl\curl.h sdk\
 copy /Y curl\curl.dll sdk\
+copy /Y ftp\ftp.h sdk\
+copy /Y ftp\ftp.dll sdk\
+copy /Y env\env.h sdk\
+copy /Y env\env.dll sdk\
 copy /Y array\array.h ejemplos\
 copy /Y array\array.dll ejemplos\
 copy /Y json\json.h ejemplos\
