@@ -98,21 +98,21 @@ copy /Y env\env.h ejemplos\C\
 copy /Y env\env.dll ejemplos\C\
 
 cd ejemplos\C
-gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.so 
-gcc -o ARRAYconversiones.bin ARRAYconversiones.c ./array.so
-gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.c ./array.so
-gcc -o JSONleer.bin JSONleer.c ./json.so ./array.so
-gcc -o JSONcrear.bin JSONcrear.c ./json.so
-gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.so ./array.so
-gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.so ./array.so
-gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.so ./array.so
-gcc -o FILESlistar.bin FILESlistar.c ./file.so ./array.so
-gcc -o DBconsultas.bin DBconsultas.c ./db.so ./array.so
-gcc -o FILESfiles.bin FILESfiles.c ./file.so ./array.so
-gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so
-gcc -o CURLpeticion.bin CURLpeticion.c ./curl.so ./array.so
-gcc -o FTPacciones.bin FTPacciones.c ./ftp.so ./array.so
-gcc -o ENVentorno.bin ENVentorno.c ./env.so ./array.so
+gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.dll 
+gcc -o ARRAYconversiones.bin ARRAYconversiones.c ./array.dll
+gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.c ./array.dll
+gcc -o JSONleer.bin JSONleer.c ./json.dll ./array.dll
+gcc -o JSONcrear.bin JSONcrear.c ./json.dll
+gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.dll ./array.dll
+gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.dll ./array.dll
+gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.dll ./array.dll
+gcc -o FILESlistar.bin FILESlistar.c ./file.dll ./array.dll
+gcc -o DBconsultas.bin DBconsultas.c ./db.dll ./array.dll
+gcc -o FILESfiles.bin FILESfiles.c ./file.dll ./array.dll
+gcc -o FILEcontent.bin FILEcontent.c ./file.dll ./array.dll
+gcc -o CURLpeticion.bin CURLpeticion.c ./curl.dll ./array.dll
+gcc -o FTPacciones.bin FTPacciones.c ./ftp.dll ./array.dll
+gcc -o ENVentorno.bin ENVentorno.c ./env.dll ./array.dll
 gcc -S -fPIC -O2 ARRAYstrings.c -o ../assembly/ARRAYstrings.s
 gcc -S -fPIC -O2 ARRAYconversiones.c -o ../assembly/ARRAYconversiones.s
 gcc -S -fPIC -O2 ARRAYcomparaciones.c -o ../assembly/ARRAYcomparaciones.s
@@ -129,21 +129,21 @@ gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s
 gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s
 gcc -S -fPIC -O2 ENVentorno.c -o ../assembly/ENVentorno.s
 cd ..\assembly
-gcc -o ARRAYstrings.bin ARRAYstrings.s ./array.so
-gcc -o ARRAYconversiones.bin ARRAYconversiones.s ./array.so
-gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.s ./array.so
-gcc -o JSONleer.bin JSONleer.s ./json.so ./array.so
-gcc -o JSONcrear.bin JSONcrear.s ./json.so
-gcc -o HTTPwebservice.bin HTTPwebservice.s ./http.so ./array.so
-gcc -o HTTPautenticacion.bin HTTPautenticacion.s ./http.so ./array.so
-gcc -o HTTPvalidarip.bin HTTPvalidarip.s ./http.so ./array.so
-gcc -o FILESfiles.bin FILESfiles.s ./file.so ./array.so
-gcc -o FILESlistar.bin FILESlistar.s ./file.so ./array.so
-gcc -o FILEcontent.bin FILEcontent.s ./file.so ./array.so
-gcc -o DBconsultas.bin DBconsultas.s ./db.so ./array.so
-gcc -o CURLpeticion.bin CURLpeticion.s ./curl.so ./array.so
-gcc -o FTPacciones.bin FTPacciones.s ./ftp.so ./array.so
-gcc -o ENVentorno.bin ENVentorno.s ./env.so ./array.so
+gcc -o ARRAYstrings.bin ARRAYstrings.s ./array.dll
+gcc -o ARRAYconversiones.bin ARRAYconversiones.s ./array.dll
+gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.s ./array.dll
+gcc -o JSONleer.bin JSONleer.s ./json.dll ./array.dll
+gcc -o JSONcrear.bin JSONcrear.s ./json.dll
+gcc -o HTTPwebservice.bin HTTPwebservice.s ./http.dll ./array.dll
+gcc -o HTTPautenticacion.bin HTTPautenticacion.s ./http.dll ./array.dll
+gcc -o HTTPvalidarip.bin HTTPvalidarip.s ./http.dll ./array.dll
+gcc -o FILESfiles.bin FILESfiles.s ./file.dll ./array.dll
+gcc -o FILESlistar.bin FILESlistar.s ./file.dll ./array.dll
+gcc -o FILEcontent.bin FILEcontent.s ./file.dll ./array.dll
+gcc -o DBconsultas.bin DBconsultas.s ./db.dll ./array.dll
+gcc -o CURLpeticion.bin CURLpeticion.s ./curl.dll ./array.dll
+gcc -o FTPacciones.bin FTPacciones.s ./ftp.dll ./array.dll
+gcc -o ENVentorno.bin ENVentorno.s ./env.dll ./array.dll
 cd ..\Golang
 go build -o JSONleer.bin JSONleer.go
 go build -o JSONcrear.bin JSONcrear.go
