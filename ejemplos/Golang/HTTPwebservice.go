@@ -37,7 +37,7 @@ func main() {
     http.RegisterHandler("/", basic_handler)
     
     // Iniciar el servidor en el puerto 8080 sin filtro de IP
-    http.StartServer("5000", 0, "", "")
+    http.StartServer("8080", 0, "", "")
     // Iniciar servidor HTTPS con certificados
     //http.StartServer("443", 0, "./server.crt", "./server.key")
 
