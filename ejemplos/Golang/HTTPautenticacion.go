@@ -1,7 +1,6 @@
 package main
 
 import (
-    "fmt"
     "time"
     http "github.com/IngenieroRicardo/http/go"
 )
