@@ -1,6 +1,13 @@
 # SDK
 Kit de Desarrollo de Software (SDK) escrito en lenguaje Golang, diseñado para facilitar el desarrollo de aplicaciones en C, Assembly y Golang.
 
+> ⚠️ **Advertencia:** Este SDK requiere conocimientos en gestión de memoria en lenguaje C.  
+> Si no sabés qué variables deben ser liberadas manualmente (por ejemplo, con `free()`), **no uses este SDK.**  
+> El uso incorrecto puede provocar fugas de memoria, corrupción de datos o comportamiento indefinido en tiempo de ejecución.
+
+Si no querés lidiar con el manejo de memoria a bajo nivel, podés usar el SDK desde Golang.
+
+
 ### 📦 Requisitos minimos:
 
 | Linux/BSD/MacOS | Windows |
