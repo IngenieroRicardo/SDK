@@ -15,7 +15,7 @@ Response token_handler(Request req) {
 
 Response login_handler(Request req) {
     if (strcmp(GetUsername(req), "admin") == 0 && strcmp(GetPassword(req), "secret") == 0) {
-        CreateResponse(200, "{\"token\":\"123\"}");
+        return CreateResponse(200, "{\"token\":\"123\"}");
     } else {
         return CreateResponse(401, "{\"error\":\"Invalid credentials\"}");
     }
