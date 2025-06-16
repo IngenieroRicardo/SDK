@@ -8,6 +8,8 @@ Kit de Desarrollo de Software (SDK) escrito en lenguaje Golang, diseñado para f
 🛡️ Si no querés lidiar con el manejo de memoria a bajo nivel, puedés usar el SDK en lenguaje Golang de manera segura.  
 ✅ Los ejemplos han sido testeados para garantizar que no presenten fugas de memoria.  
 
+--- 
+
 ### 📦 Requisitos minimos:
 
 | Linux/BSD/MacOS | Windows |
