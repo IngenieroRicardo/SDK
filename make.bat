@@ -96,23 +96,31 @@ copy /Y ftp\ftp.h ejemplos\C\
 copy /Y ftp\ftp.dll ejemplos\C\
 copy /Y env\env.h ejemplos\C\
 copy /Y env\env.dll ejemplos\C\
+copy /Y array\array.dll ejemplos\assembly\
+copy /Y json\json.dll ejemplos\assembly\
+copy /Y http\http.dll ejemplos\assembly\
+copy /Y db\db.dll ejemplos\assembly\
+copy /Y file\file.dll ejemplos\assembly\
+copy /Y curl\curl.dll ejemplos\assembly\
+copy /Y ftp\ftp.dll ejemplos\assembly\
+copy /Y env\env.dll ejemplos\assembly\
 
 cd ejemplos\C
-gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.dll 
-gcc -o ARRAYconversiones.bin ARRAYconversiones.c ./array.dll
-gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.c ./array.dll
-gcc -o JSONleer.bin JSONleer.c ./json.dll ./array.dll
-gcc -o JSONcrear.bin JSONcrear.c ./json.dll
-gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.dll ./array.dll
-gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.dll ./array.dll
-gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.dll ./array.dll
-gcc -o FILESlistar.bin FILESlistar.c ./file.dll ./array.dll
-gcc -o DBconsultas.bin DBconsultas.c ./db.dll ./array.dll
-gcc -o FILESfiles.bin FILESfiles.c ./file.dll ./array.dll
-gcc -o FILEcontent.bin FILEcontent.c ./file.dll ./array.dll
-gcc -o CURLpeticion.bin CURLpeticion.c ./curl.dll ./array.dll
-gcc -o FTPacciones.bin FTPacciones.c ./ftp.dll ./array.dll
-gcc -o ENVentorno.bin ENVentorno.c ./env.dll ./array.dll
+gcc -o ARRAYstrings.exe ARRAYstrings.c ./array.dll 
+gcc -o ARRAYconversiones.exe ARRAYconversiones.c ./array.dll
+gcc -o ARRAYcomparaciones.exe ARRAYcomparaciones.c ./array.dll
+gcc -o JSONleer.exe JSONleer.c ./json.dll ./array.dll
+gcc -o JSONcrear.exe JSONcrear.c ./json.dll
+gcc -o HTTPwebservice.exe HTTPwebservice.c ./http.dll ./array.dll
+gcc -o HTTPautenticacion.exe HTTPautenticacion.c ./http.dll ./array.dll
+gcc -o HTTPvalidarip.exe HTTPvalidarip.c ./http.dll ./array.dll
+gcc -o FILESlistar.exe FILESlistar.c ./file.dll ./array.dll
+gcc -o DBconsultas.exe DBconsultas.c ./db.dll ./array.dll
+gcc -o FILESfiles.exe FILESfiles.c ./file.dll ./array.dll
+gcc -o FILEcontent.exe FILEcontent.c ./file.dll ./array.dll
+gcc -o CURLpeticion.exe CURLpeticion.c ./curl.dll ./array.dll
+gcc -o FTPacciones.exe FTPacciones.c ./ftp.dll ./array.dll
+gcc -o ENVentorno.exe ENVentorno.c ./env.dll ./array.dll
 gcc -S -fPIC -O2 ARRAYstrings.c -o ../assembly/ARRAYstrings.s
 gcc -S -fPIC -O2 ARRAYconversiones.c -o ../assembly/ARRAYconversiones.s
 gcc -S -fPIC -O2 ARRAYcomparaciones.c -o ../assembly/ARRAYcomparaciones.s
@@ -129,33 +137,33 @@ gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s
 gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s
 gcc -S -fPIC -O2 ENVentorno.c -o ../assembly/ENVentorno.s
 cd ..\assembly
-gcc -o ARRAYstrings.bin ARRAYstrings.s ./array.dll
-gcc -o ARRAYconversiones.bin ARRAYconversiones.s ./array.dll
-gcc -o ARRAYcomparaciones.bin ARRAYcomparaciones.s ./array.dll
-gcc -o JSONleer.bin JSONleer.s ./json.dll ./array.dll
-gcc -o JSONcrear.bin JSONcrear.s ./json.dll
-gcc -o HTTPwebservice.bin HTTPwebservice.s ./http.dll ./array.dll
-gcc -o HTTPautenticacion.bin HTTPautenticacion.s ./http.dll ./array.dll
-gcc -o HTTPvalidarip.bin HTTPvalidarip.s ./http.dll ./array.dll
-gcc -o FILESfiles.bin FILESfiles.s ./file.dll ./array.dll
-gcc -o FILESlistar.bin FILESlistar.s ./file.dll ./array.dll
-gcc -o FILEcontent.bin FILEcontent.s ./file.dll ./array.dll
-gcc -o DBconsultas.bin DBconsultas.s ./db.dll ./array.dll
-gcc -o CURLpeticion.bin CURLpeticion.s ./curl.dll ./array.dll
-gcc -o FTPacciones.bin FTPacciones.s ./ftp.dll ./array.dll
-gcc -o ENVentorno.bin ENVentorno.s ./env.dll ./array.dll
+gcc -o ARRAYstrings.exe ARRAYstrings.s ./array.dll
+gcc -o ARRAYconversiones.exe ARRAYconversiones.s ./array.dll
+gcc -o ARRAYcomparaciones.exe ARRAYcomparaciones.s ./array.dll
+gcc -o JSONleer.exe JSONleer.s ./json.dll ./array.dll
+gcc -o JSONcrear.exe JSONcrear.s ./json.dll
+gcc -o HTTPwebservice.exe HTTPwebservice.s ./http.dll ./array.dll
+gcc -o HTTPautenticacion.exe HTTPautenticacion.s ./http.dll ./array.dll
+gcc -o HTTPvalidarip.exe HTTPvalidarip.s ./http.dll ./array.dll
+gcc -o FILESfiles.exe FILESfiles.s ./file.dll ./array.dll
+gcc -o FILESlistar.exe FILESlistar.s ./file.dll ./array.dll
+gcc -o FILEcontent.exe FILEcontent.s ./file.dll ./array.dll
+gcc -o DBconsultas.exe DBconsultas.s ./db.dll ./array.dll
+gcc -o CURLpeticion.exe CURLpeticion.s ./curl.dll ./array.dll
+gcc -o FTPacciones.exe FTPacciones.s ./ftp.dll ./array.dll
+gcc -o ENVentorno.exe ENVentorno.s ./env.dll ./array.dll
 cd ..\Golang
-go build -o JSONleer.bin JSONleer.go
-go build -o JSONcrear.bin JSONcrear.go
-go build -o HTTPwebservice.bin HTTPwebservice.go
-go build -o HTTPautenticacion.bin HTTPautenticacion.go
-go build -o HTTPvalidarip.bin HTTPvalidarip.go
-go build -o FILEcontent.bin FILEcontent.go
-go build -o FILESfiles.bin FILESfiles.go
-go build -o FILESlistar.bin FILESlistar.go
-go build -o DBconsultas.bin DBconsultas.go
-go build -o CURLpeticion.bin CURLpeticion.go
-go build -o FTPacciones.bin FTPacciones.go
+go build -o JSONleer.exe JSONleer.go
+go build -o JSONcrear.exe JSONcrear.go
+go build -o HTTPwebservice.exe HTTPwebservice.go
+go build -o HTTPautenticacion.exe HTTPautenticacion.go
+go build -o HTTPvalidarip.exe HTTPvalidarip.go
+go build -o FILEcontent.exe FILEcontent.go
+go build -o FILESfiles.exe FILESfiles.go
+go build -o FILESlistar.exe FILESlistar.go
+go build -o DBconsultas.exe DBconsultas.go
+go build -o CURLpeticion.exe CURLpeticion.go
+go build -o FTPacciones.exe FTPacciones.go
 cd ..\..
 goto end
 
