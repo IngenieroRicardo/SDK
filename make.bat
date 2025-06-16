@@ -80,22 +80,22 @@ copy /Y ftp\ftp.h sdk\
 copy /Y ftp\ftp.dll sdk\
 copy /Y env\env.h sdk\
 copy /Y env\env.dll sdk\
-copy /Y array\array.h ejemplos\
-copy /Y array\array.dll ejemplos\
-copy /Y json\json.h ejemplos\
-copy /Y json\json.dll ejemplos\
-copy /Y http\http.h ejemplos\
-copy /Y http\http.dll ejemplos\
-copy /Y db\db.h ejemplos\
-copy /Y db\db.dll ejemplos\
-copy /Y file\file.h ejemplos\
-copy /Y file\file.dll ejemplos\
-copy /Y curl\curl.h ejemplos\
-copy /Y curl\curl.dll ejemplos\
-copy /Y ftp\ftp.h ejemplos\
-copy /Y ftp\ftp.dll ejemplos\
-copy /Y env\env.h ejemplos\
-copy /Y env\env.dll ejemplos\
+copy /Y array\array.h ejemplos\C\
+copy /Y array\array.dll ejemplos\C\
+copy /Y json\json.h ejemplos\C\
+copy /Y json\json.dll ejemplos\C\
+copy /Y http\http.h ejemplos\C\
+copy /Y http\http.dll ejemplos\C\
+copy /Y db\db.h ejemplos\C\
+copy /Y db\db.dll ejemplos\C\
+copy /Y file\file.h ejemplos\C\
+copy /Y file\file.dll ejemplos\C\
+copy /Y curl\curl.h ejemplos\C\
+copy /Y curl\curl.dll ejemplos\C\
+copy /Y ftp\ftp.h ejemplos\C\
+copy /Y ftp\ftp.dll ejemplos\C\
+copy /Y env\env.h ejemplos\C\
+copy /Y env\env.dll ejemplos\C\
 
 cd ejemplos\C
 gcc -o ARRAYstrings.bin ARRAYstrings.c ./array.so 
