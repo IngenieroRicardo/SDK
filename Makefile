@@ -88,10 +88,13 @@ sdk:
 	cd ejemplos/C/ && gcc -o HTTPwebservice.bin HTTPwebservice.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPwebservice.c -o ../assembly/HTTPwebservice.s && cd ..
 	cd ejemplos/C/ && gcc -o HTTPautenticacion.bin HTTPautenticacion.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPautenticacion.c -o ../assembly/HTTPautenticacion.s && cd ..
 	cd ejemplos/C/ && gcc -o HTTPvalidarip.bin HTTPvalidarip.c ./http.so ./array.so && gcc -S -fPIC -O2 HTTPvalidarip.c -o ../assembly/HTTPvalidarip.s && cd ..
-	cd ejemplos/C/ && gcc -o FILESlistar.bin FILESlistar.c ./file.so ./array.so && gcc -S -fPIC -O2 FILESfiles.c -o ../assembly/FILESfiles.s && cd ..
-	cd ejemplos/C/ && gcc -o DBconsultas.bin DBconsultas.c ./db.so ./array.so && gcc -S -fPIC -O2 FILESlistar.c -o ../assembly/FILESlistar.s && cd ..
-	cd ejemplos/C/ && gcc -o FILESfiles.bin FILESfiles.c ./file.so ./array.so && gcc -S -fPIC -O2 FILEcontent.c -o ../assembly/FILEcontent.s && cd ..
-	cd ejemplos/C/ && gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so && gcc -S -fPIC -O2 DBconsultas.c -o ../assembly/DBconsultas.s && cd ..
+	cd ejemplos/C/ && gcc -o FILESlistar.bin FILESlistar.c ./file.so ./array.so && gcc -S -fPIC -O2 FILESlistar.c -o ../assembly/FILESlistar.s && cd ..
+	
+	cd ejemplos/C/ && gcc -o DBconsultas.bin DBconsultas.c ./db.so ./array.so && gcc -S -fPIC -O2 DBconsultas.c -o ../assembly/DBconsultas.s && cd ..
+	cd ejemplos/C/ && gcc -o DBejecutar.bin DBejecutar.c ./db.so ./array.so && gcc -S -fPIC -O2 DBejecutar.c -o ../assembly/DBejecutar.s && cd ..
+
+	cd ejemplos/C/ && gcc -o FILESfiles.bin FILESfiles.c ./file.so ./array.so && gcc -S -fPIC -O2 FILESfiles.c -o ../assembly/FILESfiles.s && cd ..
+	cd ejemplos/C/ && gcc -o FILEcontent.bin FILEcontent.c ./file.so ./array.so && gcc -S -fPIC -O2 FILEcontent.c -o ../assembly/FILEcontent.s && cd ..
 	cd ejemplos/C/ && gcc -o CURLpeticion.bin CURLpeticion.c ./curl.so ./array.so && gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s && cd ..
 	cd ejemplos/C/ && gcc -o FTPacciones.bin FTPacciones.c ./ftp.so ./array.so && gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s && cd ..
 	cd ejemplos/C/ && gcc -o ENVentorno.bin ENVentorno.c ./env.so ./array.so && gcc -S -fPIC -O2 ENVentorno.c -o ../assembly/ENVentorno.s && cd ..
@@ -108,7 +111,10 @@ sdk:
 	cd ejemplos/assembly/ && gcc -o FILESfiles.bin FILESfiles.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o FILESlistar.bin FILESlistar.s ./file.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o FILEcontent.bin FILEcontent.s ./file.so ./array.so && cd ..
+	
 	cd ejemplos/assembly/ && gcc -o DBconsultas.bin DBconsultas.s ./db.so ./array.so && cd ..
+	cd ejemplos/assembly/ && gcc -o DBejecutar.bin DBejecutar.s ./db.so ./array.so && cd ..
+
 	cd ejemplos/assembly/ && gcc -o CURLpeticion.bin CURLpeticion.s ./curl.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o FTPacciones.bin FTPacciones.s ./ftp.so ./array.so && cd ..
 	cd ejemplos/assembly/ && gcc -o ENVentorno.bin ENVentorno.s ./env.so ./array.so && cd ..
@@ -122,7 +128,10 @@ sdk:
 	cd ejemplos/Golang/ && go build -o FILEcontent.bin FILEcontent.go && cd ..
 	cd ejemplos/Golang/ && go build -o FILESfiles.bin FILESfiles.go && cd ..
 	cd ejemplos/Golang/ && go build -o FILESlistar.bin FILESlistar.go && cd ..
+	
 	cd ejemplos/Golang/ && go build -o DBconsultas.bin DBconsultas.go && cd ..
+	cd ejemplos/Golang/ && go build -o DBejecutar.bin DBejecutar.go && cd ..
+
 	cd ejemplos/Golang/ && go build -o CURLpeticion.bin CURLpeticion.go && cd ..
 	cd ejemplos/Golang/ && go build -o FTPacciones.bin FTPacciones.go && cd ..
 	

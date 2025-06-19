@@ -115,7 +115,10 @@ gcc -o HTTPwebservice.exe HTTPwebservice.c ./http.dll ./array.dll
 gcc -o HTTPautenticacion.exe HTTPautenticacion.c ./http.dll ./array.dll
 gcc -o HTTPvalidarip.exe HTTPvalidarip.c ./http.dll ./array.dll
 gcc -o FILESlistar.exe FILESlistar.c ./file.dll ./array.dll
+
 gcc -o DBconsultas.exe DBconsultas.c ./db.dll ./array.dll
+gcc -o DBejecutar.exe DBejecutar.c ./db.dll ./array.dll
+
 gcc -o FILESfiles.exe FILESfiles.c ./file.dll ./array.dll
 gcc -o FILEcontent.exe FILEcontent.c ./file.dll ./array.dll
 gcc -o CURLpeticion.exe CURLpeticion.c ./curl.dll ./array.dll
@@ -132,7 +135,10 @@ gcc -S -fPIC -O2 HTTPvalidarip.c -o ../assembly/HTTPvalidarip.s
 gcc -S -fPIC -O2 FILESfiles.c -o ../assembly/FILESfiles.s
 gcc -S -fPIC -O2 FILESlistar.c -o ../assembly/FILESlistar.s
 gcc -S -fPIC -O2 FILEcontent.c -o ../assembly/FILEcontent.s
+
 gcc -S -fPIC -O2 DBconsultas.c -o ../assembly/DBconsultas.s
+gcc -S -fPIC -O2 DBejecutar.c -o ../assembly/DBejecutar.s
+
 gcc -S -fPIC -O2 CURLpeticion.c -o ../assembly/CURLpeticion.s
 gcc -S -fPIC -O2 FTPacciones.c -o ../assembly/FTPacciones.s
 gcc -S -fPIC -O2 ENVentorno.c -o ../assembly/ENVentorno.s
@@ -148,7 +154,10 @@ gcc -o HTTPvalidarip.exe HTTPvalidarip.s ./http.dll ./array.dll
 gcc -o FILESfiles.exe FILESfiles.s ./file.dll ./array.dll
 gcc -o FILESlistar.exe FILESlistar.s ./file.dll ./array.dll
 gcc -o FILEcontent.exe FILEcontent.s ./file.dll ./array.dll
+
 gcc -o DBconsultas.exe DBconsultas.s ./db.dll ./array.dll
+gcc -o DBejecutar.exe DBejecutar.s ./db.dll ./array.dll
+
 gcc -o CURLpeticion.exe CURLpeticion.s ./curl.dll ./array.dll
 gcc -o FTPacciones.exe FTPacciones.s ./ftp.dll ./array.dll
 gcc -o ENVentorno.exe ENVentorno.s ./env.dll ./array.dll
@@ -161,7 +170,10 @@ go build -o HTTPvalidarip.exe HTTPvalidarip.go
 go build -o FILEcontent.exe FILEcontent.go
 go build -o FILESfiles.exe FILESfiles.go
 go build -o FILESlistar.exe FILESlistar.go
+
 go build -o DBconsultas.exe DBconsultas.go
+go build -o DBejecutar.exe DBejecutar.go
+
 go build -o CURLpeticion.exe CURLpeticion.go
 go build -o FTPacciones.exe FTPacciones.go
 cd ..\..
