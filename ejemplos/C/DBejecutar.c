@@ -28,7 +28,7 @@ int main() {
     String json = Concat("{ \"id\": 6, \"tipo\": \"midi\" }", NULL); //Tambien acepta arreglos
     //String json = Concat("[{ \"id\": 7, \"tipo\": \"MP4\" },{ \"id\": 8, \"tipo\": \"vinilo\" }]", NULL);
 
-    SQLResult resultado = SQLrun(diver, conexion, query, json, 0);
+    SQLResult resultado = SQLrun(diver, conexion, query, json, NULL);
     
     if (resultado.is_error) {
         printf("Error: %s\n", resultado.json);

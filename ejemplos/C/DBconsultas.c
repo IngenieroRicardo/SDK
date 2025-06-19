@@ -33,7 +33,7 @@ int main() {
     SQLResult resultado = SQLrun(diver, conexion, "INSERT INTO chat.usuario(nickname, picture) VALUES (?, ?);", argumento1, argumento2, NULL);*/
     
     
-    SQLResult resultado = SQLrun(diver, conexion, query, NULL, 0);
+    SQLResult resultado = SQLrun(diver, conexion, query, NULL);
     
     if (resultado.is_error) {
         printf("Error: %s\n", resultado.json);
