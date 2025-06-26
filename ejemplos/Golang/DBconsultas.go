@@ -54,7 +54,7 @@ func main() {
 		fmt.Printf("JSON: %s\n", result1.Json)
 		fmt.Printf("JSON: %s\n", result2.Json)
 
-		time.Sleep(50 * time.Second)
+		//time.Sleep(50 * time.Second)
 
 		db.CloseSQL(conn)
 	}*/
