@@ -43,4 +43,27 @@ func main() {
 	} else {
 		fmt.Printf("Datos obtenidos:\n%s\n", resultado.Json)
 	}
+
+
+
+	/*conn, err := db.LoadSQL("mysql", "root:123456@tcp(127.0.0.1:3306)/test")
+	if err == nil {
+		result1 := db.SQLrunonLoad(conn, "SELECT NOW()")
+		result2 := db.SQLrunonLoad(conn, "SELECT nickname, picture FROM chat.usuario WHERE id=?", "int::2808")
+
+		fmt.Printf("JSON: %s\n", result1.Json)
+		fmt.Printf("JSON: %s\n", result2.Json)
+
+		time.Sleep(50 * time.Second)
+
+		db.CloseSQL(conn)
+	}*/
+
+
+
+
+
+
+
+	
 }
