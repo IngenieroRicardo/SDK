@@ -5,8 +5,8 @@ github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.11.0/go.mod h1:HcM1YX14R7CJc
 github.com/Azure/azure-sdk-for-go/sdk/internal v0.7.0/go.mod h1:yqy467j36fJxcRV2TzfVZ1pCb5vxm4BtZPUdYWe/Xo8=
 github.com/IngenieroRicardo/curl v0.0.0-20250612191438-d71897a86a55 h1:bYL158YY/9qUV99NJQ0liC5JzCZf4qMujeW8sSySYbU=
 github.com/IngenieroRicardo/curl v0.0.0-20250612191438-d71897a86a55/go.mod h1:YHTqF34qlrWBrZJ4Gz2QFFYO9gIEhXuag3kxCfrzfpc=
-github.com/IngenieroRicardo/db v0.0.0-20250619151552-32192a4f762b h1:Kg2Ji52j1jr4ZxhVERJRBUc5ndW+sKmrM4Z6IsQ4mFk=
-github.com/IngenieroRicardo/db v0.0.0-20250619151552-32192a4f762b/go.mod h1:aHVbl6v59kM8EhjN3J9bZIeBomNOnl3Lgf+tiUO1gNA=
+github.com/IngenieroRicardo/db v0.0.0-20250626204439-e7fee1396183 h1:1+WAV6z7mtOh7lWkGD0qA5IZBNDPb7u4lZ+5/iWOcUI=
+github.com/IngenieroRicardo/db v0.0.0-20250626204439-e7fee1396183/go.mod h1:aHVbl6v59kM8EhjN3J9bZIeBomNOnl3Lgf+tiUO1gNA=
 github.com/IngenieroRicardo/file v0.0.0-20250612191614-3f54f95c2c77 h1:HD4CupADc6AzQ2j7+f25ZZOkcVyhemNCZSX/F8/pz3g=
 github.com/IngenieroRicardo/file v0.0.0-20250612191614-3f54f95c2c77/go.mod h1:UM/xlL/3EzZ7ZPrhYhV/usvoQxxDT7+wuKZFQWulAB8=
 github.com/IngenieroRicardo/ftp v0.0.0-20250616210454-279fd056a5c8 h1:2mcErEFwG/degHoqaLQPuu3R2+zGNxqAxIJXukvSqTg=
