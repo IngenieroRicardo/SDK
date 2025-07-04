@@ -45,8 +45,8 @@ func main() {
 	}
 
 
-
-	/*conn, err := db.LoadSQL("mysql", "root:123456@tcp(127.0.0.1:3306)/test")
+	// db.LoadSQL(driver="mysql", conexion="root:123456@tcp(127.0.0.1:3306)/test", maxOpenConns=670, maxIdleConns=100, connMaxLifetime=10*time.Minute, connMaxIdleTime=10*time.Minute)
+	/*conn, err := db.LoadSQL("mysql", "root:123456@tcp(127.0.0.1:3306)/test", 0, 0, 0, 0)
 	if err == nil {
 		result1 := db.SQLrunonLoad(conn, "SELECT NOW()")
 		result2 := db.SQLrunonLoad(conn, "SELECT nickname, picture FROM chat.usuario WHERE id=?", "int::2808")
