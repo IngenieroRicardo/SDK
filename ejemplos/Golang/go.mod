@@ -1,10 +1,10 @@
-module ejemplos
+module ejemplo
 
 go 1.24.1
 
 require (
 	github.com/IngenieroRicardo/curl v0.0.0-20250612191438-d71897a86a55
-	github.com/IngenieroRicardo/db v0.0.0-20250626204439-e7fee1396183
+	github.com/IngenieroRicardo/db v0.0.0-20250704144509-00fb405bf81e
 	github.com/IngenieroRicardo/file v0.0.0-20250612191614-3f54f95c2c77
 	github.com/IngenieroRicardo/ftp v0.0.0-20250616210454-279fd056a5c8
 	github.com/IngenieroRicardo/http v0.0.0-20250616211930-b6e6e9f06571
