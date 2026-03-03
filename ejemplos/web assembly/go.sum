@@ -5,6 +5,8 @@ github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.11.0/go.mod h1:HcM1YX14R7CJc
 github.com/Azure/azure-sdk-for-go/sdk/internal v0.7.0/go.mod h1:yqy467j36fJxcRV2TzfVZ1pCb5vxm4BtZPUdYWe/Xo8=
 github.com/IngenieroRicardo/db v0.0.0-20260213210646-f321f02ce307 h1:cwVnlFBrwhWrUok/pU231i77NSEVZFuEqbqpOrLjUPI=
 github.com/IngenieroRicardo/db v0.0.0-20260213210646-f321f02ce307/go.mod h1:g1VrsVJonvYgWRc75BHOVxVgYZjDjOOqMdBOfZUufpI=
+github.com/IngenieroRicardo/file v0.0.0-20260303192907-b862f86def0d h1:wOrpZESIybcrxTIkoJIh0ErGc25lJnKwUzyD0KGc2ac=
+github.com/IngenieroRicardo/file v0.0.0-20260303192907-b862f86def0d/go.mod h1:UM/xlL/3EzZ7ZPrhYhV/usvoQxxDT7+wuKZFQWulAB8=
 github.com/IngenieroRicardo/json v0.0.0-20250723173517-1531d3ccced0 h1:IzemaZYhSA5lhacmCJODs7ygfMGZqe9RenyKtMfGl1c=
 github.com/IngenieroRicardo/json v0.0.0-20250723173517-1531d3ccced0/go.mod h1:dI/A/83Cb81wMiW/1RY9ZCxX/eZzrYlZst6qqP3vQ00=
 github.com/VictoriaMetrics/easyproto v0.1.4 h1:r8cNvo8o6sR4QShBXQd1bKw/VVLSQma/V2KhTBPf+Sc=

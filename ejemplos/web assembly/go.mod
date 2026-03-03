@@ -5,6 +5,7 @@ go 1.24.1
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/IngenieroRicardo/db v0.0.0-20260213210646-f321f02ce307 // indirect
+	github.com/IngenieroRicardo/file v0.0.0-20260303192907-b862f86def0d // indirect
 	github.com/IngenieroRicardo/json v0.0.0-20250723173517-1531d3ccced0 // indirect
 	github.com/VictoriaMetrics/easyproto v0.1.4 // indirect
 	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
