@@ -130,8 +130,18 @@ sdk:
 	cd ejemplos/Golang/ && go build -o FTPacciones.bin FTPacciones.go && cd ..
 
 	# Compilar los ejemplos en web assembly
-	cd ejemplos/web assembly/ && GOOS=js GOARCH=wasm go build -o JSONleer.bin JSONleer.go && cd ..
-	cd ejemplos/web assembly/ && GOOS=js GOARCH=wasm go build -o JSONcrear.bin JSONcrear.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o JSONleer.wasm JSONleer.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o JSONcrear.wasm JSONcrear.go && cd ..
+	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPwebservice.wasm HTTPwebservice.go && cd ..
+	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPautenticacion.wasm HTTPautenticacion.go && cd ..
+	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPvalidarip.wasm HTTPvalidarip.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILEcontent.wasm FILEcontent.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILESfiles.wasm FILESfiles.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILESlistar.wasm FILESlistar.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o DBconsultas.wasm DBconsultas.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o DBejecutar.wasm DBejecutar.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o CURLpeticion.wasm CURLpeticion.go && cd ..
+
 	
 compile:
 	# Con este comando generas el assemblyd de tu codigo C: gcc -S -fPIC -O2 main.c -o main.s
