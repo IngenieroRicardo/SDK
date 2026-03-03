@@ -1,36 +1,31 @@
 
 ```mermaid
 sequenceDiagram
-    title Simulación de WebService en el Navegador con ServiceWorker para Programar en Yaegi
+    title Aplicación WebAssembly con Service Worker para manejar rutas API
 
     actor Usuario
     participant Main as Página Principal<br/>(index.html)
     participant SW as Service Worker<br/>(sw.js)
-    participant Notepad as Editor de Codigo<br/>(notepad.html edit servicio.go)
-    participant Golang as Interprete Golang<br/>(golang.html run servicio.go)
+    participant WASM as Aplicación WebAssembly<br/>(aplicacion.wasm)
 
-    Note over Main,Golang: 🟣 Usuario | 🔵 Registro | 🟢 Confirmación | 🔴 Petición fetch | 🟠 Respuesta
+    Note over Main,WASM: 🟣 Usuario | 🔵 Registro | 🟢 Confirmación | 🔴 Petición fetch | 🟠 Respuesta
 
-    Usuario->>Main: 🟣 Abre navegador
-
-    Usuario->>Notepad: 🟣 notepad servicio.go
-    Notepad->>Golang: 🟣 Desde notepad<br/>Run in yeagi
-    Golang->>Golang: Inicia yaegi.wasm<br/>Interpreta servicio.go
-    Golang->>SW: 🔵 REGISTER_SW
-    SW-->>Golang: 🟢 Service Worker registrado/activo
-    Golang->>SW: 🔵 REGISTER_ROUTE /api/foo
-    SW-->>Golang: 🟢 Ruta registrada
+    Usuario->>Main: 🟣 Abre navegador y carga index.html
+    Main->>SW: 🔵 Registra Service Worker (si no está activo)
+    SW-->>Main: 🟢 Service Worker registrado/activo
+    Main->>WASM: 🟣 Carga e inicia aplicacion.wasm
+    WASM->>SW: 🔵 REGISTER_ROUTE /api/foo (mediante postMessage)
+    SW-->>WASM: 🟢 Ruta registrada
 
     Usuario->>SW: 🟣 fetch('/api/foo')
-    SW->>Golang: 🔴 FETCH_FROM_SW
-    Golang->>Golang: Ejecuta handler Go (interpretado)
-    Golang-->>SW: 🟠 FETCH_RESPONSE
-    SW-->>Usuario: 🟠 Respuesta
+    SW->>WASM: 🔴 FETCH_FROM_SW (mensaje con request)
+    WASM->>WASM: Procesa petición (lógica de negocio)
+    WASM-->>SW: 🟠 FETCH_RESPONSE (respuesta)
+    SW-->>Usuario: 🟠 Respuesta HTTP
 
     Usuario->>SW: 🟣 fetch('/api/otra')
     SW->>Main: 🔴 FETCH_FROM_SW (cliente por defecto)
-    Main->>Main: dispatchFetch()
+    Main->>Main: dispatchFetch() normal
     Main-->>SW: 🟠 FETCH_RESPONSE
     SW-->>Usuario: 🟠 Respuesta
-
 ```
