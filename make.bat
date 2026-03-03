@@ -174,17 +174,17 @@ go build -o FTPacciones.exe FTPacciones.go
 cd ..\web assembly
 set GOOS=js
 set GOARCH=wasm
-GOOS=js GOARCH=wasm go build -o JSONleer.wasm JSONleer.go
-GOOS=js GOARCH=wasm go build -o JSONcrear.wasm JSONcrear.go
-::GOOS=js GOARCH=wasm go build -o HTTPwebservice.wasm HTTPwebservice.go
-::GOOS=js GOARCH=wasm go build -o HTTPautenticacion.wasm HTTPautenticacion.go
-::GOOS=js GOARCH=wasm go build -o HTTPvalidarip.wasm HTTPvalidarip.go
-GOOS=js GOARCH=wasm go build -o FILEcontent.wasm FILEcontent.go
-GOOS=js GOARCH=wasm go build -o FILESfiles.wasm FILESfiles.go
-GOOS=js GOARCH=wasm go build -o FILESlistar.wasm FILESlistar.go
-GOOS=js GOARCH=wasm go build -o DBconsultas.wasm DBconsultas.go
-GOOS=js GOARCH=wasm go build -o DBejecutar.wasm DBejecutar.go
-GOOS=js GOARCH=wasm go build -o CURLpeticion.wasm CURLpeticion.go
+go build -o JSONleer.wasm JSONleer.go
+go build -o JSONcrear.wasm JSONcrear.go
+::go build -o HTTPwebservice.wasm HTTPwebservice.go
+::go build -o HTTPautenticacion.wasm HTTPautenticacion.go
+::go build -o HTTPvalidarip.wasm HTTPvalidarip.go
+go build -o FILEcontent.wasm FILEcontent.go
+go build -o FILESfiles.wasm FILESfiles.go
+go build -o FILESlistar.wasm FILESlistar.go
+go build -o DBconsultas.wasm DBconsultas.go
+go build -o DBejecutar.wasm DBejecutar.go
+go build -o CURLpeticion.wasm CURLpeticion.go
 
 cd ..\..
 goto end
@@ -208,3 +208,4 @@ cd ..
 goto end
 
 :end
+
