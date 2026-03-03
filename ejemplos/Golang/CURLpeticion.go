@@ -15,7 +15,7 @@ func main() {
 	body := "{\"title\": \"foo\",\"body\": \"bar\",\"userId\": 1}"
 
 	// Hacer petición Post
-	resp := curl.Post("https://jsonplaceholder.typicode.com/posts", header, body)
+	resp, _ := curl.Post("https://jsonplaceholder.typicode.com/posts", header, body)
     
 	if resp != "" {
 		fmt.Printf("Response:\n%s\n", resp)
