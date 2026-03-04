@@ -41,7 +41,7 @@ fetch('/api/login', {
     }
 })
 .then(res => res.text())
-.then(alert);
+.then(console.log);
 
 
 
@@ -53,6 +53,6 @@ fetch('/api/protected', {
     }
 })
 .then(res => res.text())
-.then(alert);
+.then(console.log);
 
 */
