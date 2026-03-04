@@ -132,9 +132,9 @@ sdk:
 	# Compilar los ejemplos en web assembly
 	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o JSONleer.wasm JSONleer.go && cd ..
 	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o JSONcrear.wasm JSONcrear.go && cd ..
-	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPwebservice.wasm HTTPwebservice.go && cd ..
-	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPautenticacion.wasm HTTPautenticacion.go && cd ..
-	#cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPvalidarip.wasm HTTPvalidarip.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPwebservice.wasm HTTPwebservice.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPautenticacion.wasm HTTPautenticacion.go && cd ..
+	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o HTTPvalidarip.wasm HTTPvalidarip.go && cd ..
 	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILEcontent.wasm FILEcontent.go && cd ..
 	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILESfiles.wasm FILESfiles.go && cd ..
 	cd "ejemplos/web assembly/" && GOOS=js GOARCH=wasm go build -o FILESlistar.wasm FILESlistar.go && cd ..
