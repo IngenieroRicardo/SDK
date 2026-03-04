@@ -33,8 +33,16 @@ make sdk
 make compile
 ```
 
+## 🚀 Ejecución de WASM
+
+```bash
+go run gitlab.com/RicardoValladares/server@latest "ejemplos/web assembly/" 8080
+```
+
+
 ### 🚀 Ejecutar main.bin
 
 ```bash
 make run
 ```
+
