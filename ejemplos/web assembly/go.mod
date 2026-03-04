@@ -3,17 +3,22 @@ module ejemplo
 go 1.24.1
 
 require (
+	github.com/IngenieroRicardo/curl v0.0.0-20250713152203-75b70d532c85
+	github.com/IngenieroRicardo/db v0.0.0-20260303191649-cac4eb15a07e
+	github.com/IngenieroRicardo/file v0.0.0-20260303192907-b862f86def0d
+	github.com/IngenieroRicardo/http v0.0.0-20260304164702-5492efafb37e
+	github.com/IngenieroRicardo/json v0.0.0-20250723173517-1531d3ccced0
+)
+
+require (
 	filippo.io/edwards25519 v1.1.0 // indirect
-	github.com/IngenieroRicardo/curl v0.0.0-20250713152203-75b70d532c85 // indirect
-	github.com/IngenieroRicardo/db v0.0.0-20260213210646-f321f02ce307 // indirect
-	github.com/IngenieroRicardo/file v0.0.0-20260303192907-b862f86def0d // indirect
-	github.com/IngenieroRicardo/json v0.0.0-20250723173517-1531d3ccced0 // indirect
 	github.com/VictoriaMetrics/easyproto v0.1.4 // indirect
 	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-sql-driver/mysql v1.9.3 // indirect
 	github.com/godror/godror v0.50.0 // indirect
 	github.com/godror/knownpb v0.3.0 // indirect
+	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
 	github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
 	github.com/lib/pq v1.11.2 // indirect
