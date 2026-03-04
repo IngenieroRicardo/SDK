@@ -176,9 +176,9 @@ set GOOS=js
 set GOARCH=wasm
 go build -o JSONleer.wasm JSONleer.go
 go build -o JSONcrear.wasm JSONcrear.go
-::go build -o HTTPwebservice.wasm HTTPwebservice.go
-::go build -o HTTPautenticacion.wasm HTTPautenticacion.go
-::go build -o HTTPvalidarip.wasm HTTPvalidarip.go
+go build -o HTTPwebservice.wasm HTTPwebservice.go
+go build -o HTTPautenticacion.wasm HTTPautenticacion.go
+go build -o HTTPvalidarip.wasm HTTPvalidarip.go
 go build -o FILEcontent.wasm FILEcontent.go
 go build -o FILESfiles.wasm FILESfiles.go
 go build -o FILESlistar.wasm FILESlistar.go
@@ -208,4 +208,5 @@ cd ..
 goto end
 
 :end
+
 
