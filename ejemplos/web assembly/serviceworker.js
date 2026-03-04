@@ -137,24 +137,6 @@ window.addEventListener('beforeunload', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-// TESTING
-function demo() {
-	const winbox = new WinBox("Funciones", { url: "/full.html", border: "0.3em", x: "100", y: "100", width: "300", height: "300" });
-	winbox.addClass("no-resize");
-	winbox.addClass("no-full");
-	winbox.addClass("no-max");
-}
-
 /*
 window.registerRoute('/api/hola', async (request) => {
     console.log('Handler JS ejecutándose para /api/hola', request);
