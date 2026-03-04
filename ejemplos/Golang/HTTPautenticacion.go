@@ -6,7 +6,7 @@ import (
 )
 
 func token_handler(req http.HttpRequest) http.HttpResponse {
-    if (req.GetBearerToken() == "123") {
+    if (http.ValidateToken(req.GetBearerToken())) {
         return http.CreateResponse(200, `{"message":"Valid token"}`)
     } else {
         return http.CreateResponse(403, `{"error":"Invalid token"}`)
@@ -15,7 +15,7 @@ func token_handler(req http.HttpRequest) http.HttpResponse {
 
 func login_handler(req http.HttpRequest) http.HttpResponse {
     if  req.GetUsername() == "admin" && req.GetPassword() == "secret" {
-        return http.CreateResponse(200, `{"error":"123"}`)
+        return http.CreateResponse(200, http.GenerateToken(1, 60))
     } else {
     	return http.CreateResponse(401, `{"error":"Invalid credentials"}`)
     }
