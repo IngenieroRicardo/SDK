@@ -39,13 +39,14 @@ make compile
 make run
 ```
 
-### 🔧 Arquitectura de WebService en Web Assembly
+### 🚀 Ejecutar web assembly
 
 ```bash
 go run gitlab.com/RicardoValladares/server@latest "ejemplos/web assembly/" 8080
 ```
 
 
+### 🔧 Arquitectura de WebService en Web Assembly
 
 ```mermaid
 sequenceDiagram
